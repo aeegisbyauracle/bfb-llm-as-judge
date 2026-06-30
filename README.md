@@ -34,3 +34,49 @@ python3 -m pip install huggingface_hub
 ```
 
 The expected download currently contains 34 files and is about 245 MB.
+
+## NVIDIA judges
+
+This repository includes the official BigFinanceBench harness with an additional
+`nvidia:<model-id>` provider. NVIDIA judges receive BFB's unchanged system prompt,
+question, reference answer, unweighted rubric, final answer, complete trace, and strict
+JSON response schema.
+
+Install the harness and export the one key shared by all NVIDIA NIM models:
+
+```bash
+python3 -m pip install -r requirements.txt
+export NVIDIA_API_KEY="nvapi-your-key"
+```
+
+Available judge aliases:
+
+| Alias | NVIDIA model |
+| --- | --- |
+| `llama` | `meta/llama-3.3-70b-instruct` |
+| `qwen` | `qwen/qwen3-next-80b-a3b-instruct` |
+| `mistral` | `mistralai/mistral-medium-3.5-128b` |
+| `nemotron` | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning` |
+
+Smoke-test one released trace with Llama:
+
+```bash
+python3 scripts/run_nvidia_grader.py \
+  --judge llama \
+  --traces data/raw/big-finance-benchmark/traces/gpt55.traces.jsonl \
+  --sample-n 1
+```
+
+Run another judge by replacing `llama` with `qwen`, `mistral`, or `nemotron`. Results
+are written under `runs/nvidia-grades/`. Runs resume automatically and use concurrency
+`1` by default because NVIDIA's free endpoints can have long queues.
+
+The original orchestrator also accepts NVIDIA judges directly:
+
+```bash
+python3 scripts/run_eval_set.py \
+  --dataset data/big_finance_subset.jsonl \
+  --run-id nvidia-judge-run \
+  --sample-n 1 \
+  --judge nvidia:meta/llama-3.3-70b-instruct
+```

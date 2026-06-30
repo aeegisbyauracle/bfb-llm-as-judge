@@ -1,1 +1,6 @@
 data/raw/
+.DS_Store
+__pycache__/
+*.py[cod]
+*.egg-info/
+runs/
