@@ -66,9 +66,14 @@ _JUDGE_CAPS: dict[str, int] = {
     "openai": 20,
     "anthropic": 10,
     "gateway": 30,
-    "nvidia": 2,
+    "nvidia": 30,
 }
 _JUDGE_SEMAPHORES: dict[str, asyncio.Semaphore] = {}
+
+
+def set_judge_cap(provider: str, cap: int) -> None:
+    """Override the concurrency cap for a provider. Call before any grade() calls."""
+    _JUDGE_CAPS[provider] = cap
 
 
 def _judge_semaphore(judge_model_id: str) -> asyncio.Semaphore:
@@ -191,10 +196,16 @@ async def grade(
     item: DatasetItem,
     judge_model_id: str,
     max_output_tokens: int = 16384,
+    num_retries: int = 20,
+    request_timeout: int = 1800,
     judge_alias: str | None = None,
 ) -> GradedRun:
     """Grade a run with the given judge.
 
+    `num_retries`: how many times litellm retries on 429/transient errors.
+      Default 20 (~15-20 min cumulative backoff). Use lower values (e.g. 5) for
+      fast runs where you'd rather fail quickly and let the caller retry.
+    `request_timeout`: per-call timeout in seconds. Default 1800 (30 min).
     `judge_alias`: if provided, the stored `GradedRun.judge` field uses this string
     instead of `judge_model_id`. Useful when substituting a same-family model and
     wanting downstream analysis to treat the grades as a single judge bucket.
@@ -226,13 +237,8 @@ async def grade(
         ],
         "max_tokens": max_output_tokens,
         "temperature": 0,
-        # Retry rate limits and transient errors with LiteLLM's built-in exponential
-        # backoff. 20 retries gives ~15-20 min cumulative wait under default backoff,
-        # enough to ride out sustained quota pressure during a many-model parallel
-        # grade phase.
-        "num_retries": 20,
-        # Per-call timeout (seconds). Bounded worst case for hung judge calls.
-        "request_timeout": 1800,
+        "num_retries": num_retries,
+        "request_timeout": request_timeout,
         "response_format": {
             "type": "json_schema",
             "json_schema": {
