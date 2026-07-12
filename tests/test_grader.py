@@ -112,6 +112,7 @@ async def test_grader_translates_judge_response_to_graded_run(monkeypatch):
     async def fake_acompletion(**_kwargs):
         return fake_response
 
+    monkeypatch.setenv("NVIDIA_API_KEY", "test-key")
     monkeypatch.setattr(grader_module.litellm, "acompletion", fake_acompletion)
 
     run = _make_run("bf-test-001")
@@ -169,6 +170,41 @@ async def test_grader_handles_missing_rubric_index(monkeypatch):
     assert graded.rubric_points_earned == 6
     assert graded.rubric_lines[1].earned is False
     assert graded.rubric_lines[1].judge_explanation == "missing"
+
+
+@pytest.mark.asyncio
+async def test_grader_normalizes_zero_based_rubric_indices(monkeypatch):
+    """Providers that return 0..N-1 must not shift decisions by one line."""
+
+    judge_payload = {
+        "final_answer_correct": True,
+        "rubric": [
+            {"index": 0, "satisfied": True, "explanation": "first"},
+            {"index": 1, "satisfied": False, "explanation": "second"},
+            {"index": 2, "satisfied": True, "explanation": "third"},
+        ],
+    }
+    fake_response = _FakeResponse(json.dumps(judge_payload), 100, 20, 0.0)
+
+    async def fake_acompletion(**_kwargs):
+        return fake_response
+
+    monkeypatch.setenv("NVIDIA_API_KEY", "test-key")
+    monkeypatch.setattr(grader_module.litellm, "acompletion", fake_acompletion)
+
+    graded = await grade(
+        run=_make_run("bf-test-001"),
+        item=_make_item(),
+        judge_model_id="nvidia:meta/llama-3.3-70b-instruct",
+    )
+
+    assert [line.earned for line in graded.rubric_lines] == [True, False, True]
+    assert [line.judge_explanation for line in graded.rubric_lines] == [
+        "first",
+        "second",
+        "third",
+    ]
+    assert graded.rubric_points_earned == 6
 
 
 @pytest.mark.asyncio

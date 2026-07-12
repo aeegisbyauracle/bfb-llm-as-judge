@@ -218,6 +218,14 @@ async def grade(
     # LiteLLM normalizes structured output across providers via
     # response_format={type: json_schema}. With drop_params=True, providers that don't
     # support strict json_schema fall back to JSON-mode + post-validation.
+    num_retries = int(os.environ.get("BFB_JUDGE_NUM_RETRIES", "20"))
+    request_timeout = int(os.environ.get("BFB_JUDGE_REQUEST_TIMEOUT", "1800"))
+    hard_timeout = int(
+        os.environ.get(
+            "BFB_JUDGE_HARD_TIMEOUT",
+            str(request_timeout * (num_retries + 1) + 30),
+        )
+    )
     kwargs: dict[str, object] = {
         "model": judge_model,
         "messages": [
@@ -230,9 +238,9 @@ async def grade(
         # backoff. 20 retries gives ~15-20 min cumulative wait under default backoff,
         # enough to ride out sustained quota pressure during a many-model parallel
         # grade phase.
-        "num_retries": 20,
+        "num_retries": num_retries,
         # Per-call timeout (seconds). Bounded worst case for hung judge calls.
-        "request_timeout": 1800,
+        "request_timeout": request_timeout,
         "response_format": {
             "type": "json_schema",
             "json_schema": {
@@ -265,12 +273,16 @@ async def grade(
     sem = _judge_semaphore(judge_model_id)
     async with sem:
         try:
-            response = await litellm.acompletion(**kwargs)
+            response = await asyncio.wait_for(
+                litellm.acompletion(**kwargs), timeout=hard_timeout
+            )
         except (litellm.BadRequestError, litellm.InternalServerError) as e:
             msg = str(e).lower()
             if "temperature" in msg and "deprecated" in msg:
                 kwargs.pop("temperature", None)
-                response = await litellm.acompletion(**kwargs)
+                response = await asyncio.wait_for(
+                    litellm.acompletion(**kwargs), timeout=hard_timeout
+                )
             else:
                 raise
     content = response.choices[0].message.content or "{}"
@@ -288,7 +300,21 @@ async def grade(
     judge_cost_usd = float(judge_cost) if judge_cost is not None else None
 
     final_correct: bool = bool(parsed.get("final_answer_correct", False))
-    by_index = {entry["index"]: entry for entry in parsed.get("rubric", [])}
+    rubric_entries = parsed.get("rubric", [])
+    # Some OpenAI-compatible providers satisfy the schema but number rubric entries
+    # from 0 instead of the 1-based numbering shown in the prompt.  Treat an array
+    # containing index 0 (and no index N) as consistently zero-based.  Without this
+    # normalization every decision is shifted one line and the final line is padded
+    # as ``missing``.
+    returned_indices = {
+        entry.get("index") for entry in rubric_entries if isinstance(entry, dict)
+    }
+    zero_based = 0 in returned_indices and len(item.rubric) not in returned_indices
+    by_index = {
+        int(entry["index"]) + (1 if zero_based else 0): entry
+        for entry in rubric_entries
+        if isinstance(entry, dict) and isinstance(entry.get("index"), int)
+    }
 
     graded: list[GradedRubricLine] = []
     points_earned = 0
