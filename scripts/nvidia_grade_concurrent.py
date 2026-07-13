@@ -40,11 +40,11 @@ _log_file = None
 _log_lock = asyncio.Lock()
 
 
-def _init_log(output_dir: Path, traces_name: str) -> Path:
+def _init_log(log_dir: Path, traces_name: str) -> Path:
     global _log_file
-    output_dir.mkdir(parents=True, exist_ok=True)
+    log_dir.mkdir(parents=True, exist_ok=True)
     ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_path = output_dir / f"{traces_name}.run.{ts}.log"
+    log_path = log_dir / f"{traces_name}.run.{ts}.log"
     _log_file = open(log_path, "w", encoding="utf-8")
     return log_path
 
@@ -73,7 +73,7 @@ def parse_args() -> argparse.Namespace:
         choices=list(JUDGES.keys()),
         help="Which judge(s) to run (e.g. --judge mistral nemotron). Defaults to all 4.",
     )
-    parser.add_argument("--output-dir", type=Path, default=Path("runs/nvidia-grades"))
+    parser.add_argument("--output-dir", type=Path, default=Path("grade-results"))
     parser.add_argument("--concurrency", type=int, default=CONCURRENCY_PER_JUDGE)
     parser.add_argument("--delay", type=float, default=INTER_REQUEST_DELAY)
     parser.add_argument("--max-output-tokens", type=int, default=16384)
@@ -94,7 +94,9 @@ def load_items(path: Path) -> dict[str, DatasetItem]:
 
 def output_path_for(traces: Path, judge_alias: str, output_dir: Path) -> Path:
     label = traces.name.removesuffix(".traces.jsonl").removesuffix(".jsonl")
-    return output_dir / f"{label}.grades.{judge_alias}.jsonl"
+    model_dir = output_dir / label
+    model_dir.mkdir(parents=True, exist_ok=True)
+    return model_dir / f"{judge_alias}.jsonl"
 
 
 async def run_judge(
@@ -168,7 +170,8 @@ async def run(args: argparse.Namespace) -> int:
     items = load_items(args.dataset)
     traces = list(read_traces(args.traces))
     traces_name = args.traces.name.removesuffix(".traces.jsonl").removesuffix(".jsonl")
-    log_path = _init_log(args.output_dir, traces_name)
+    log_dir = args.output_dir / traces_name
+    log_path = _init_log(log_dir, traces_name)
     log(f"Log: {log_path}")
     log(f"Loaded {len(traces)} traces, {len(items)} dataset items")
     log(f"Running {len(judges_to_run)} judge(s): {', '.join(judges_to_run)} | concurrency={args.concurrency}/judge | delay={args.delay}s")
