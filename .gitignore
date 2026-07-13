@@ -1,6 +1,11 @@
 data/raw/
+data/dummy_traces.jsonl
 .DS_Store
 __pycache__/
 *.py[cod]
 *.egg-info/
 runs/
+!runs/nvidia-grades/
+runs/nvidia-grades/*
+!runs/nvidia-grades/sonnet46.*
+ira_notes.md

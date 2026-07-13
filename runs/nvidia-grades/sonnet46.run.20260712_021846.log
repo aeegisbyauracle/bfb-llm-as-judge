@@ -1,0 +1,20 @@
+[02:18:46] Log: runs/nvidia-grades/sonnet46.run.20260712_021846.log
+[02:18:46] Loaded 151 traces, 50 dataset items
+[02:18:46] Running 1 judge(s): nemotron | concurrency=10/judge | delay=1.0s
+[02:18:46] [nemotron] 14 remaining of 151 traces
+[02:19:10] [nemotron] 1/14 done (1/14) [23.6s]
+[02:19:11] [nemotron] 2/14 done (2/14) [24.7s]
+[02:19:13] [nemotron] 3/14 done (3/14) [26.4s]
+[02:19:14] [nemotron] 4/14 done (4/14) [27.4s]
+[02:19:30] [nemotron] 5/14 done (5/14) [43.2s]
+[02:19:30] [nemotron] 6/14 done (6/14) [43.8s]
+[02:19:42] [nemotron] 7/14 done (7/14) [26.7s]
+[02:19:46] [nemotron] 8/14 done (8/14) [59.7s]
+[02:19:51] [nemotron] 9/14 done (9/14) [64.4s]
+[02:19:54] [nemotron] 10/14 done (10/14) [67.6s]
+[02:19:55] [nemotron] 11/14 done (11/14) [44.1s]
+[02:20:29] [nemotron] 12/14 done (12/14) [101.9s]
+[02:20:56] [nemotron] 13/14 done (13/14) [103.9s]
+[02:26:33] [nemotron] 14/14 done (14/14) [438.6s]
+[02:26:33] Finished in 467.1s
+[02:26:33]   nemotron: 14 graded, 0 failed
