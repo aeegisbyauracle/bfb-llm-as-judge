@@ -70,6 +70,10 @@ def parse_model_id(model_id: str) -> tuple[str, str]:
         "vertex-anthropic",
         "gateway",
         "nvidia",
+        "groq",
+        "cerebras",
+        "tinker",
+        "vllm",
     }:
         raise ValueError(f"unsupported provider: {provider}")
     if not _DATE_SUFFIX_RE.search(snapshot) and snapshot not in _WARNED_FLOATING_ALIASES:
@@ -106,6 +110,14 @@ def _to_litellm_model(provider: str, snapshot: str) -> str:
         return f"vercel_ai_gateway/{snapshot}"
     if provider == "nvidia":
         return f"nvidia_nim/{snapshot}"
+    if provider == "groq":
+        return f"groq/{snapshot}"
+    if provider == "cerebras":
+        return f"cerebras/{snapshot}"
+    if provider == "tinker":
+        return f"openai/{snapshot}"
+    if provider == "vllm":
+        return f"openai/{snapshot}"
     raise ValueError(f"unsupported provider: {provider}")
 
 

@@ -20,6 +20,17 @@ JUDGES = {
     "qwen": "nvidia:qwen/qwen3-next-80b-a3b-instruct",
     "mistral": "nvidia:mistralai/mistral-medium-3.5-128b",
     "nemotron": "nvidia:nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "groq-qwen3-32b": "groq:qwen/qwen3-32b",
+    "groq-llama-8b": "groq:llama-3.1-8b-instant",
+    "groq-llama-70b": "groq:llama-3.3-70b-versatile",
+    "cerebras-zai": "cerebras:zai-glm-4.7",
+    "cerebras-gemma": "cerebras:gemma-4-31b",
+    "tinker-nemotron-ultra": "tinker:nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16:peft:262144",
+    "tinker-nemotron-super": "tinker:nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16:peft:262144",
+    "tinker-qwen397b": "tinker:Qwen/Qwen3.5-397B-A17B:peft:262144",
+    "tinker-qwen35b": "tinker:Qwen/Qwen3.6-35B-A3B",
+    "tinker-kimi": "tinker:moonshotai/Kimi-K2.6:peft:131072",
+    "vllm-llama": "vllm:meta-llama/Llama-3.3-70B-Instruct",
 }
 
 CONCURRENCY_PER_JUDGE = 5

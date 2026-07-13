@@ -67,6 +67,10 @@ _JUDGE_CAPS: dict[str, int] = {
     "anthropic": 10,
     "gateway": 30,
     "nvidia": 30,
+    "groq": 10,
+    "cerebras": 10,
+    "tinker": 20,
+    "vllm": 2,
 }
 _JUDGE_SEMAPHORES: dict[str, asyncio.Semaphore] = {}
 
@@ -248,6 +252,21 @@ async def grade(
             },
         },
     }
+    if provider == "vllm":
+        vllm_key = os.environ.get("VLLM_API_KEY", "").strip()
+        if not vllm_key:
+            raise RuntimeError("Set VLLM_API_KEY before using a vLLM model.")
+        kwargs["api_key"] = vllm_key
+        kwargs["api_base"] = os.environ.get("VLLM_API_BASE", "http://localhost:8000/v1")
+    if provider == "tinker":
+        tinker_key = os.environ.get("TINKER_API_KEY", "").strip()
+        if not tinker_key:
+            raise RuntimeError("Set TINKER_API_KEY before using a Tinker model.")
+        kwargs["api_key"] = tinker_key
+        kwargs["api_base"] = os.environ.get(
+            "TINKER_API_BASE",
+            "https://tinker.thinkingmachines.dev/services/tinker-prod/oai/api/v1",
+        )
     if provider == "nvidia":
         kwargs.update(_nvidia_call_kwargs())
         if snapshot == "mistralai/mistral-medium-3.5-128b":

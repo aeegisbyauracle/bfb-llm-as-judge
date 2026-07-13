@@ -8,3 +8,4 @@ runs/
 !runs/nvidia-grades/
 runs/nvidia-grades/*
 !runs/nvidia-grades/sonnet46.*
+ira_notes.md
