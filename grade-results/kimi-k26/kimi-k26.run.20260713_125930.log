@@ -1,0 +1,6 @@
+[12:59:30] Log: grade-results/kimi-k26/kimi-k26.run.20260713_125930.log
+[12:59:30] Loaded 150 traces, 50 dataset items
+[12:59:30] Running 1 judge(s): tinker-gpt-oss-20b | concurrency=5/judge | delay=2.0s
+[12:59:30] [tinker-gpt-oss-20b] 0 remaining of 150 traces
+[12:59:30] Finished in 0.0s
+[12:59:30]   tinker-gpt-oss-20b: 0 graded, 0 failed

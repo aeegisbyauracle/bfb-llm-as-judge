@@ -1,0 +1,8 @@
+[12:58:41] Log: grade-results/gpt55/gpt55.run.20260713_125841.log
+[12:58:41] Loaded 150 traces, 50 dataset items
+[12:58:41] Running 1 judge(s): tinker-gpt-oss-20b | concurrency=5/judge | delay=2.0s
+[12:58:41] [tinker-gpt-oss-20b] 2 remaining of 150 traces
+[12:59:13] [tinker-gpt-oss-20b] 1/2 done (1/2) [29.4s]
+[12:59:28] [tinker-gpt-oss-20b] 2/2 done (2/2) [44.8s]
+[12:59:28] Finished in 46.9s
+[12:59:28]   tinker-gpt-oss-20b: 2 graded, 0 failed

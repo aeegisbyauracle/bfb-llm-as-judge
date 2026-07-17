@@ -1,0 +1,157 @@
+[11:15:59] Log: grade-results/sonnet46/sonnet46.run.20260713_111559.log
+[11:15:59] Loaded 151 traces, 50 dataset items
+[11:15:59] Running 1 judge(s): tinker-gpt-oss-20b | concurrency=5/judge | delay=2.0s
+[11:15:59] [tinker-gpt-oss-20b] 151 remaining of 151 traces
+[11:16:08] [tinker-gpt-oss-20b] 1/151 done (1/151) [6.9s]
+[11:16:08] [tinker-gpt-oss-20b] 2/151 done (2/151) [7.0s]
+[11:16:09] [tinker-gpt-oss-20b] FAILED bf-5b4cd39939/t0 (7.6s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 44182 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:16:14] [tinker-gpt-oss-20b] 3/151 done (4/151) [13.1s]
+[11:16:18] [tinker-gpt-oss-20b] FAILED bf-a838bf1b8e/t0 (7.9s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 52016 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:16:21] [tinker-gpt-oss-20b] 4/151 done (6/151) [10.5s]
+[11:16:22] [tinker-gpt-oss-20b] 5/151 done (7/151) [20.4s]
+[11:16:22] [tinker-gpt-oss-20b] FAILED bf-8ccf07aa37/t0 (5.9s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 40685 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:16:23] [tinker-gpt-oss-20b] 6/151 done (9/151) [13.0s]
+[11:16:27] [tinker-gpt-oss-20b] 7/151 done (10/151) [6.7s]
+[11:16:31] [tinker-gpt-oss-20b] 8/151 done (11/151) [7.8s]
+[11:16:31] [tinker-gpt-oss-20b] FAILED bf-9fb74e0fff/t0 (7.3s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 41578 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:16:33] [tinker-gpt-oss-20b] 9/151 done (13/151) [9.8s]
+[11:16:34] [tinker-gpt-oss-20b] 10/151 done (14/151) [4.9s]
+[11:16:40] [tinker-gpt-oss-20b] FAILED bf-dc4465e435/t0 (6.7s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 43876 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:16:43] [tinker-gpt-oss-20b] 11/151 done (16/151) [9.3s]
+[11:16:47] [tinker-gpt-oss-20b] FAILED bf-87f9ec55fa/t0 (11.0s): string indices must be integers, not 'str'
+[11:16:47] [tinker-gpt-oss-20b] 12/151 done (18/151) [12.1s]
+[11:16:49] [tinker-gpt-oss-20b] 13/151 done (19/151) [6.4s]
+[11:16:50] [tinker-gpt-oss-20b] 14/151 done (20/151) [5.0s]
+[11:16:54] [tinker-gpt-oss-20b] 15/151 done (21/151) [28.4s]
+[11:16:55] [tinker-gpt-oss-20b] FAILED bf-55f33faa82/t0 (5.3s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 53568 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:16:57] [tinker-gpt-oss-20b] FAILED bf-bc7e63859f/t0 (5.2s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 38847 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:17:00] [tinker-gpt-oss-20b] 16/151 done (24/151) [3.4s]
+[11:17:01] [tinker-gpt-oss-20b] FAILED bf-a45651184d/t0 (5.5s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 42123 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:17:03] [tinker-gpt-oss-20b] FAILED bf-fdfa344920/t0 (12.2s): string indices must be integers, not 'str'
+[11:17:07] [tinker-gpt-oss-20b] 17/151 done (27/151) [18.5s]
+[11:17:08] [tinker-gpt-oss-20b] 18/151 done (28/151) [6.5s]
+[11:17:11] [tinker-gpt-oss-20b] 19/151 done (29/151) [8.3s]
+[11:17:12] [tinker-gpt-oss-20b] 20/151 done (30/151) [7.3s]
+[11:17:14] [tinker-gpt-oss-20b] 21/151 done (31/151) [5.3s]
+[11:17:18] [tinker-gpt-oss-20b] 22/151 done (32/151) [19.2s]
+[11:17:20] [tinker-gpt-oss-20b] 23/151 done (33/151) [9.1s]
+[11:17:23] [tinker-gpt-oss-20b] 24/151 done (34/151) [6.7s]
+[11:17:24] [tinker-gpt-oss-20b] 25/151 done (35/151) [9.7s]
+[11:17:28] [tinker-gpt-oss-20b] 26/151 done (36/151) [15.2s]
+[11:17:30] [tinker-gpt-oss-20b] 27/151 done (37/151) [4.7s]
+[11:17:31] [tinker-gpt-oss-20b] 28/151 done (38/151) [10.6s]
+[11:17:41] [tinker-gpt-oss-20b] 29/151 done (39/151) [19.9s]
+[11:17:44] [tinker-gpt-oss-20b] 30/151 done (40/151) [11.7s]
+[11:17:47] [tinker-gpt-oss-20b] 31/151 done (41/151) [14.0s]
+[11:17:48] [tinker-gpt-oss-20b] 32/151 done (42/151) [4.3s]
+[11:17:54] [tinker-gpt-oss-20b] 33/151 done (43/151) [7.4s]
+[11:17:56] [tinker-gpt-oss-20b] 34/151 done (44/151) [31.2s]
+[11:17:57] [tinker-gpt-oss-20b] 35/151 done (45/151) [26.3s]
+[11:18:01] [tinker-gpt-oss-20b] 36/151 done (46/151) [12.6s]
+[11:18:05] [tinker-gpt-oss-20b] 37/151 done (47/151) [6.5s]
+[11:18:07] [tinker-gpt-oss-20b] FAILED bf-b9eac17de3/t0 (8.9s): 'bool' object is not subscriptable
+[11:18:13] [tinker-gpt-oss-20b] 38/151 done (49/151) [9.7s]
+[11:18:13] [tinker-gpt-oss-20b] 39/151 done (50/151) [23.7s]
+[11:18:14] [tinker-gpt-oss-20b] FAILED bf-5b4cd39939/t1 (7.1s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 43890 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:18:18] [tinker-gpt-oss-20b] 40/151 done (52/151) [22.2s]
+[11:18:19] [tinker-gpt-oss-20b] 41/151 done (53/151) [9.7s]
+[11:18:24] [tinker-gpt-oss-20b] FAILED bf-a838bf1b8e/t1 (3.7s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 49694 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:18:24] [tinker-gpt-oss-20b] 42/151 done (55/151) [9.2s]
+[11:18:27] [tinker-gpt-oss-20b] 43/151 done (56/151) [6.4s]
+[11:18:27] [tinker-gpt-oss-20b] 44/151 done (57/151) [11.0s]
+[11:18:29] [tinker-gpt-oss-20b] FAILED bf-fc3be3969d/t1 (3.5s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 37998 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:18:32] [tinker-gpt-oss-20b] FAILED bf-8ccf07aa37/t1 (5.2s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 42360 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:18:34] [tinker-gpt-oss-20b] 45/151 done (60/151) [18.1s]
+[11:18:36] [tinker-gpt-oss-20b] FAILED bf-2c01534176/t1 (6.7s): string indices must be integers, not 'str'
+[11:18:36] [tinker-gpt-oss-20b] 46/151 done (62/151) [6.7s]
+[11:18:37] [tinker-gpt-oss-20b] FAILED bf-9fb74e0fff/t1 (3.8s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 40130 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:18:39] [tinker-gpt-oss-20b] 47/151 done (64/151) [7.8s]
+[11:18:42] [tinker-gpt-oss-20b] FAILED bf-a6ecc2c171/t1 (4.4s): 'bool' object is not subscriptable
+[11:18:47] [tinker-gpt-oss-20b] 48/151 done (66/151) [8.6s]
+[11:18:47] [tinker-gpt-oss-20b] 49/151 done (67/151) [11.4s]
+[11:18:50] [tinker-gpt-oss-20b] 50/151 done (68/151) [9.0s]
+[11:18:52] [tinker-gpt-oss-20b] 51/151 done (69/151) [12.1s]
+[11:18:54] [tinker-gpt-oss-20b] 52/151 done (70/151) [9.2s]
+[11:18:54] [tinker-gpt-oss-20b] 53/151 done (71/151) [5.0s]
+[11:18:55] [tinker-gpt-oss-20b] 54/151 done (72/151) [5.9s]
+[11:18:59] [tinker-gpt-oss-20b] FAILED bf-55f33faa82/t1 (5.2s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 51472 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:19:02] [tinker-gpt-oss-20b] FAILED bf-bc7e63859f/t1 (6.0s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 41555 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:19:10] [tinker-gpt-oss-20b] 55/151 done (75/151) [13.5s]
+[11:19:12] [tinker-gpt-oss-20b] 56/151 done (76/151) [16.5s]
+[11:19:13] [tinker-gpt-oss-20b] 57/151 done (77/151) [9.6s]
+[11:19:19] [tinker-gpt-oss-20b] 58/151 done (78/151) [6.5s]
+[11:19:21] [tinker-gpt-oss-20b] 59/151 done (79/151) [5.9s]
+[11:19:22] [tinker-gpt-oss-20b] FAILED bf-d1228a30ce/t1 (21.6s): 'index'
+[11:19:23] [tinker-gpt-oss-20b] FAILED bf-712e20a246/t1 (8.4s): string indices must be integers, not 'str'
+[11:19:25] [tinker-gpt-oss-20b] 60/151 done (82/151) [32.8s]
+[11:19:27] [tinker-gpt-oss-20b] 61/151 done (83/151) [5.9s]
+[11:19:28] [tinker-gpt-oss-20b] 62/151 done (84/151) [4.8s]
+[11:19:33] [tinker-gpt-oss-20b] 63/151 done (85/151) [8.1s]
+[11:19:35] [tinker-gpt-oss-20b] 64/151 done (86/151) [8.7s]
+[11:19:36] [tinker-gpt-oss-20b] 65/151 done (87/151) [11.9s]
+[11:19:39] [tinker-gpt-oss-20b] 66/151 done (88/151) [4.5s]
+[11:19:46] [tinker-gpt-oss-20b] 67/151 done (89/151) [17.5s]
+[11:19:49] [tinker-gpt-oss-20b] 68/151 done (90/151) [19.2s]
+[11:19:51] [tinker-gpt-oss-20b] 69/151 done (91/151) [10.4s]
+[11:19:52] [tinker-gpt-oss-20b] 70/151 done (92/151) [13.1s]
+[11:19:53] [tinker-gpt-oss-20b] FAILED bf-c75541fef6/t1 (4.2s): string indices must be integers, not 'str'
+[11:20:00] [tinker-gpt-oss-20b] 71/151 done (94/151) [6.6s]
+[11:20:01] [tinker-gpt-oss-20b] 72/151 done (95/151) [9.6s]
+[11:20:09] [tinker-gpt-oss-20b] 73/151 done (96/151) [6.7s]
+[11:20:12] [tinker-gpt-oss-20b] 74/151 done (97/151) [9.3s]
+[11:20:20] [tinker-gpt-oss-20b] FAILED bf-5b4cd39939/t2 (5.9s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 42584 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:20:21] [tinker-gpt-oss-20b] 75/151 done (99/151) [10.0s]
+[11:20:21] [tinker-gpt-oss-20b] 76/151 done (100/151) [27.6s]
+[11:20:24] [tinker-gpt-oss-20b] 77/151 done (101/151) [29.5s]
+[11:20:28] [tinker-gpt-oss-20b] FAILED bf-3b698728de/t2 (4.9s): string indices must be integers, not 'str'
+[11:20:28] [tinker-gpt-oss-20b] FAILED bf-b0926059cd/t2 (4.6s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 37691 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:20:35] [tinker-gpt-oss-20b] 78/151 done (104/151) [13.3s]
+[11:20:36] [tinker-gpt-oss-20b] FAILED bf-a838bf1b8e/t2 (6.0s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 51700 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:20:37] [tinker-gpt-oss-20b] 79/151 done (106/151) [11.3s]
+[11:20:41] [tinker-gpt-oss-20b] FAILED bf-8ccf07aa37/t2 (3.6s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 42346 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:20:41] [tinker-gpt-oss-20b] 80/151 done (108/151) [11.7s]
+[11:20:44] [tinker-gpt-oss-20b] FAILED bf-fc3be3969d/t2 (6.3s): 'bool' object is not subscriptable
+[11:20:45] [tinker-gpt-oss-20b] FAILED bf-2c01534176/t2 (6.0s): string indices must be integers, not 'str'
+[11:20:48] [tinker-gpt-oss-20b] FAILED bf-9fb74e0fff/t2 (2.9s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 41848 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:20:50] [tinker-gpt-oss-20b] 81/151 done (112/151) [72.7s]
+[11:20:53] [tinker-gpt-oss-20b] FAILED bf-9e1fff9250/t2 (5.9s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 34073 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:20:55] [tinker-gpt-oss-20b] 82/151 done (114/151) [4.2s]
+[11:20:57] [tinker-gpt-oss-20b] 83/151 done (115/151) [13.2s]
+[11:20:57] [tinker-gpt-oss-20b] 84/151 done (116/151) [13.6s]
+[11:20:59] [tinker-gpt-oss-20b] 85/151 done (117/151) [7.0s]
+[11:21:03] [tinker-gpt-oss-20b] FAILED bf-dc4465e435/t2 (7.2s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 46257 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:21:07] [tinker-gpt-oss-20b] 86/151 done (119/151) [7.7s]
+[11:21:10] [tinker-gpt-oss-20b] 87/151 done (120/151) [13.2s]
+[11:21:11] [tinker-gpt-oss-20b] 88/151 done (121/151) [9.7s]
+[11:21:12] [tinker-gpt-oss-20b] FAILED bf-55f33faa82/t2 (3.0s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 53213 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:21:12] [tinker-gpt-oss-20b] FAILED bf-87f9ec55fa/t2 (13.1s): string indices must be integers, not 'str'
+[11:21:16] [tinker-gpt-oss-20b] FAILED bf-bc7e63859f/t2 (3.8s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 38928 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:21:22] [tinker-gpt-oss-20b] 89/151 done (125/151) [8.2s]
+[11:21:23] [tinker-gpt-oss-20b] 90/151 done (126/151) [9.5s]
+[11:21:27] [tinker-gpt-oss-20b] FAILED bf-fdfa344920/t2 (15.3s): string indices must be integers, not 'str'
+[11:21:29] [tinker-gpt-oss-20b] 91/151 done (128/151) [5.6s]
+[11:21:34] [tinker-gpt-oss-20b] 92/151 done (129/151) [29.0s]
+[11:21:34] [tinker-gpt-oss-20b] 93/151 done (130/151) [8.8s]
+[11:21:37] [tinker-gpt-oss-20b] 94/151 done (131/151) [7.3s]
+[11:21:39] [tinker-gpt-oss-20b] 95/151 done (132/151) [7.7s]
+[11:21:41] [tinker-gpt-oss-20b] FAILED bf-80a8d42d12/t2 (5.4s): litellm.BadRequestError: OpenAIException - Error code: 400 - {'detail': "Prompt length plus max_tokens exceeds the model's context window: 35655 prompt tokens + 16384 max_tokens > 32768."} LiteLLM Retried: 5 times
+[11:21:44] [tinker-gpt-oss-20b] 96/151 done (134/151) [8.5s]
+[11:21:48] [tinker-gpt-oss-20b] 97/151 done (135/151) [9.5s]
+[11:21:50] [tinker-gpt-oss-20b] 98/151 done (136/151) [8.7s]
+[11:21:53] [tinker-gpt-oss-20b] 99/151 done (137/151) [10.0s]
+[11:21:54] [tinker-gpt-oss-20b] 100/151 done (138/151) [3.8s]
+[11:22:03] [tinker-gpt-oss-20b] 101/151 done (139/151) [16.6s]
+[11:22:07] [tinker-gpt-oss-20b] 102/151 done (140/151) [11.5s]
+[11:22:07] [tinker-gpt-oss-20b] 103/151 done (141/151) [11.7s]
+[11:22:09] [tinker-gpt-oss-20b] 104/151 done (142/151) [17.2s]
+[11:22:10] [tinker-gpt-oss-20b] 105/151 done (143/151) [5.2s]
+[11:22:19] [tinker-gpt-oss-20b] 106/151 done (144/151) [10.6s]
+[11:22:20] [tinker-gpt-oss-20b] 107/151 done (145/151) [10.6s]
+[11:22:29] [tinker-gpt-oss-20b] 108/151 done (146/151) [7.2s]
+[11:22:29] [tinker-gpt-oss-20b] 109/151 done (147/151) [6.9s]
+[11:22:35] [tinker-gpt-oss-20b] FAILED bf-8d95e11919/t2 (24.1s): string indices must be integers, not 'str'
+[11:22:35] [tinker-gpt-oss-20b] 110/151 done (149/151) [23.4s]
+[11:22:37] [tinker-gpt-oss-20b] 111/151 done (150/151) [6.4s]
+[11:23:40] [tinker-gpt-oss-20b] 112/151 done (151/151) [141.9s]
+[11:23:40] Finished in 461.3s
+[11:23:40]   tinker-gpt-oss-20b: 112 graded, 39 failed

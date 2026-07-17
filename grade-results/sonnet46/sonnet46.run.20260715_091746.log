@@ -1,0 +1,6 @@
+[09:17:46] Log: grade-results/sonnet46/sonnet46.run.20260715_091746.log
+[09:17:46] Loaded 151 traces, 50 dataset items
+[09:17:46] Running 1 judge(s): vllm-llama | concurrency=2/judge | delay=2.0s
+[09:17:46] [vllm-llama] 151 remaining of 151 traces
+[09:18:03] [vllm-llama] FAILED bf-39bacf8580/t0 (15.5s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[09:18:05] [vllm-llama] FAILED bf-5b4cd39939/t0 (17.3s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times

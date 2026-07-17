@@ -1,0 +1,7 @@
+[11:43:17] Log: grade-results/gem31pro/gem31pro.run.20260713_114317.log
+[11:43:17] Loaded 150 traces, 50 dataset items
+[11:43:17] Running 1 judge(s): tinker-gpt-oss-20b | concurrency=5/judge | delay=2.0s
+[11:43:17] [tinker-gpt-oss-20b] 1 remaining of 150 traces
+[11:43:33] [tinker-gpt-oss-20b] FAILED bf-0a8c20169a/t0 (14.5s): Expecting value: line 3 column 13 (char 28)
+[11:43:33] Finished in 16.5s
+[11:43:33]   tinker-gpt-oss-20b: 0 graded, 1 failed

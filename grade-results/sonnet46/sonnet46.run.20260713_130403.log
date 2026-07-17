@@ -1,0 +1,7 @@
+[13:04:03] Log: grade-results/sonnet46/sonnet46.run.20260713_130403.log
+[13:04:03] Loaded 151 traces, 50 dataset items
+[13:04:03] Running 1 judge(s): tinker-gpt-oss-20b | concurrency=5/judge | delay=2.0s
+[13:04:03] [tinker-gpt-oss-20b] 1 remaining of 151 traces
+[13:04:42] [tinker-gpt-oss-20b] 1/1 done (1/1) [37.5s]
+[13:04:42] Finished in 39.6s
+[13:04:42]   tinker-gpt-oss-20b: 1 graded, 0 failed

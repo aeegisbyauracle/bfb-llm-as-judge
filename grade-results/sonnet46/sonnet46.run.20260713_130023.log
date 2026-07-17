@@ -1,0 +1,7 @@
+[13:00:23] Log: grade-results/sonnet46/sonnet46.run.20260713_130023.log
+[13:00:23] Loaded 151 traces, 50 dataset items
+[13:00:23] Running 1 judge(s): tinker-gpt-oss-20b | concurrency=5/judge | delay=2.0s
+[13:00:23] [tinker-gpt-oss-20b] 1 remaining of 151 traces
+[13:01:11] [tinker-gpt-oss-20b] FAILED bf-55f33faa82/t2 (46.0s): Could not parse judge response as JSON: line 1 column 1 (char 0)
+[13:01:11] Finished in 48.0s
+[13:01:11]   tinker-gpt-oss-20b: 0 graded, 1 failed

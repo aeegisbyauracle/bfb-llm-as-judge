@@ -49,6 +49,14 @@ def test_accepts_nvidia_model(monkeypatch):
     assert _to_litellm_model(provider, snapshot) == "nvidia_nim/meta/llama-3.3-70b-instruct"
 
 
+def test_accepts_tinker_model():
+    with pytest.warns(UserWarning, match="no date suffix"):
+        provider, snapshot = parse_model_id("tinker:openai/gpt-oss-20b")
+    assert provider == "tinker"
+    assert snapshot == "openai/gpt-oss-20b"
+    assert _to_litellm_model(provider, snapshot) == "openai/openai/gpt-oss-20b"
+
+
 def test_nvidia_credentials_use_existing_environment_name(monkeypatch):
     monkeypatch.setenv("NVIDIA_API_KEY", "  test-key\n")
     monkeypatch.delenv("NVIDIA_NIM_API_KEY", raising=False)

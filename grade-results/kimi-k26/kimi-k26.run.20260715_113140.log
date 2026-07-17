@@ -1,0 +1,156 @@
+[11:31:40] Log: grade-results/kimi-k26/kimi-k26.run.20260715_113140.log
+[11:31:40] Loaded 150 traces, 50 dataset items
+[11:31:40] Running 1 judge(s): vllm-llama | concurrency=2/judge | delay=2.0s
+[11:31:40] [vllm-llama] 150 remaining of 150 traces
+[11:32:58] [vllm-llama] 1/150 done (1/150) [75.2s]
+[11:33:17] [vllm-llama] 2/150 done (2/150) [94.8s]
+[11:33:23] [vllm-llama] FAILED bf-b0926059cd/t0 (3.9s): litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - This model's maximum context length is 65536 tokens. However, you requested 68323 tokens (51939 in the messages, 16384 in the completion). Please reduce the length of the messages or completion. LiteLLM Retried: 5 times
+[11:34:16] [vllm-llama] 3/150 done (4/150) [76.2s]
+[11:35:08] [vllm-llama] 4/150 done (5/150) [102.8s]
+[11:36:08] [vllm-llama] 5/150 done (6/150) [58.4s]
+[11:37:21] [vllm-llama] 6/150 done (7/150) [70.6s]
+[11:38:05] [vllm-llama] 7/150 done (8/150) [42.4s]
+[11:39:55] [vllm-llama] 8/150 done (9/150) [107.2s]
+[11:40:54] [vllm-llama] 9/150 done (10/150) [57.2s]
+[11:41:37] [vllm-llama] 10/150 done (11/150) [41.1s]
+[11:41:38] [vllm-llama] 11/150 done (12/150) [440.4s]
+[11:44:32] [vllm-llama] 12/150 done (13/150) [172.6s]
+[11:44:50] [vllm-llama] 13/150 done (14/150) [16.8s]
+[11:44:58] [vllm-llama] 14/150 done (15/150) [197.4s]
+[11:45:03] [vllm-llama] FAILED bf-dc4465e435/t0 (3.6s): litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - This model's maximum context length is 65536 tokens. However, you requested 77438 tokens (61054 in the messages, 16384 in the completion). Please reduce the length of the messages or completion. LiteLLM Retried: 5 times
+[11:46:03] [vllm-llama] 15/150 done (17/150) [70.2s]
+[11:46:05] [vllm-llama] 16/150 done (18/150) [59.3s]
+[11:47:21] [vllm-llama] 17/150 done (19/150) [74.1s]
+[11:49:59] [vllm-llama] 18/150 done (20/150) [234.4s]
+[12:09:38] [vllm-llama] FAILED bf-55f33faa82/t0 (1335.8s): litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out. - timeout value=120.0, time taken=734.17 seconds LiteLLM Retried: 5 times
+[12:11:33] [vllm-llama] 19/150 done (22/150) [112.1s]
+[12:12:17] [vllm-llama] FAILED bf-a9408e6a52/t0 (1336.5s): litellm.Timeout: APITimeoutError - Request timed out. Error_str: Request timed out. - timeout value=120.0, time taken=735.06 seconds LiteLLM Retried: 5 times
+[12:14:02] [vllm-llama] 20/150 done (24/150) [102.4s]
+[12:15:35] [vllm-llama] 21/150 done (25/150) [240.5s]
+[12:17:06] [vllm-llama] 22/150 done (26/150) [182.2s]
+[12:17:30] [vllm-llama] 23/150 done (27/150) [113.3s]
+[12:17:55] [vllm-llama] 24/150 done (28/150) [22.4s]
+[12:18:07] [vllm-llama] 25/150 done (29/150) [58.7s]
+[12:19:09] [vllm-llama] 26/150 done (30/150) [59.7s]
+[12:19:24] [vllm-llama] 27/150 done (31/150) [87.8s]
+[12:21:05] [vllm-llama] 28/150 done (32/150) [114.9s]
+[12:27:44] [vllm-llama] FAILED bf-f6817f623b/t0 (497.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:27:49] [vllm-llama] FAILED bf-80a8d42d12/t0 (401.4s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:28:03] [vllm-llama] FAILED bf-51844d71db/t0 (16.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:28:07] [vllm-llama] FAILED bf-36d4a10aa8/t0 (16.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:28:21] [vllm-llama] FAILED bf-c40881c993/t0 (16.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:28:26] [vllm-llama] FAILED bf-472ca86db1/t0 (16.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:28:41] [vllm-llama] FAILED bf-6bd9e9e383/t0 (17.4s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:28:44] [vllm-llama] FAILED bf-ea4ca2ff65/t0 (16.4s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:28:59] [vllm-llama] FAILED bf-c664c596ed/t0 (16.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:29:03] [vllm-llama] FAILED bf-c97cd6fa17/t0 (17.0s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:29:17] [vllm-llama] FAILED bf-c75541fef6/t0 (15.3s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:29:22] [vllm-llama] FAILED bf-20474b5540/t0 (16.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:29:35] [vllm-llama] FAILED bf-fcb94dc80c/t0 (16.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:29:41] [vllm-llama] FAILED bf-8d95e11919/t0 (16.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:29:55] [vllm-llama] FAILED bf-b9eac17de3/t0 (17.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:29:59] [vllm-llama] FAILED bf-50f29af2ed/t0 (16.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:30:14] [vllm-llama] FAILED bf-77a2cbc3ee/t0 (17.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:30:17] [vllm-llama] FAILED bf-80db2fdd07/t0 (16.0s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:30:32] [vllm-llama] FAILED bf-5b4cd39939/t1 (15.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:30:35] [vllm-llama] FAILED bf-39bacf8580/t1 (16.4s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:30:51] [vllm-llama] FAILED bf-3b698728de/t1 (16.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:30:53] [vllm-llama] FAILED bf-b0926059cd/t1 (16.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:31:10] [vllm-llama] FAILED bf-dfbfada14f/t1 (17.0s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:31:11] [vllm-llama] FAILED bf-a838bf1b8e/t1 (16.0s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:31:28] [vllm-llama] FAILED bf-d0e8d00008/t1 (15.9s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:31:30] [vllm-llama] FAILED bf-8ccf07aa37/t1 (16.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:31:46] [vllm-llama] FAILED bf-fc3be3969d/t1 (16.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:31:48] [vllm-llama] FAILED bf-2c01534176/t1 (16.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:32:04] [vllm-llama] FAILED bf-66ccc5d04a/t1 (15.4s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:32:07] [vllm-llama] FAILED bf-37f81aef9b/t1 (17.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:32:22] [vllm-llama] FAILED bf-9fb74e0fff/t1 (16.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:32:26] [vllm-llama] FAILED bf-9e1fff9250/t1 (16.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:32:41] [vllm-llama] FAILED bf-a6ecc2c171/t1 (16.5s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:32:45] [vllm-llama] FAILED bf-6fb17b7f3d/t1 (17.3s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:32:59] [vllm-llama] FAILED bf-dc4465e435/t1 (16.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:33:03] [vllm-llama] FAILED bf-0e2b33b21b/t1 (16.4s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:33:17] [vllm-llama] FAILED bf-0a8c20169a/t1 (16.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:33:22] [vllm-llama] FAILED bf-87f9ec55fa/t1 (17.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:33:34] [vllm-llama] FAILED bf-aedffb054a/t1 (15.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:33:41] [vllm-llama] FAILED bf-55f33faa82/t1 (16.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:33:53] [vllm-llama] FAILED bf-a9408e6a52/t1 (16.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:34:00] [vllm-llama] FAILED bf-fdfa344920/t1 (17.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:34:13] [vllm-llama] FAILED bf-bc7e63859f/t1 (18.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:34:19] [vllm-llama] FAILED bf-a45651184d/t1 (17.0s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:34:31] [vllm-llama] FAILED bf-d1228a30ce/t1 (16.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:34:38] [vllm-llama] FAILED bf-de888bed80/t1 (16.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:34:51] [vllm-llama] FAILED bf-ec1b0219ac/t1 (17.9s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:34:56] [vllm-llama] FAILED bf-712e20a246/t1 (16.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:35:11] [vllm-llama] FAILED bf-dd28f22b19/t1 (17.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:35:15] [vllm-llama] FAILED bf-14e00db503/t1 (16.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:35:29] [vllm-llama] FAILED bf-f6817f623b/t1 (16.0s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:35:33] [vllm-llama] FAILED bf-36d4a10aa8/t1 (16.3s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:35:47] [vllm-llama] FAILED bf-80a8d42d12/t1 (16.0s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:35:52] [vllm-llama] FAILED bf-51844d71db/t1 (17.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:36:05] [vllm-llama] FAILED bf-c40881c993/t1 (16.5s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:36:11] [vllm-llama] FAILED bf-472ca86db1/t1 (16.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:36:23] [vllm-llama] FAILED bf-6bd9e9e383/t1 (16.0s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:36:29] [vllm-llama] FAILED bf-ea4ca2ff65/t1 (16.5s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:36:42] [vllm-llama] FAILED bf-c664c596ed/t1 (16.3s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:36:48] [vllm-llama] FAILED bf-c97cd6fa17/t1 (16.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:37:01] [vllm-llama] FAILED bf-c75541fef6/t1 (17.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:37:06] [vllm-llama] FAILED bf-20474b5540/t1 (15.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:37:20] [vllm-llama] FAILED bf-fcb94dc80c/t1 (16.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:37:25] [vllm-llama] FAILED bf-8d95e11919/t1 (17.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:37:39] [vllm-llama] FAILED bf-b9eac17de3/t1 (16.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:37:43] [vllm-llama] FAILED bf-50f29af2ed/t1 (16.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:37:57] [vllm-llama] FAILED bf-77a2cbc3ee/t1 (16.3s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:38:02] [vllm-llama] FAILED bf-80db2fdd07/t1 (17.3s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:38:15] [vllm-llama] FAILED bf-5b4cd39939/t2 (15.9s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:38:21] [vllm-llama] FAILED bf-39bacf8580/t2 (16.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:38:34] [vllm-llama] FAILED bf-3b698728de/t2 (17.3s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:38:41] [vllm-llama] FAILED bf-b0926059cd/t2 (17.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:38:53] [vllm-llama] FAILED bf-dfbfada14f/t2 (16.5s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:38:59] [vllm-llama] FAILED bf-a838bf1b8e/t2 (16.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:39:12] [vllm-llama] FAILED bf-d0e8d00008/t2 (17.5s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:39:17] [vllm-llama] FAILED bf-8ccf07aa37/t2 (16.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:39:31] [vllm-llama] FAILED bf-fc3be3969d/t2 (16.9s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:39:37] [vllm-llama] FAILED bf-2c01534176/t2 (17.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:39:51] [vllm-llama] FAILED bf-66ccc5d04a/t2 (17.5s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:39:56] [vllm-llama] FAILED bf-37f81aef9b/t2 (17.0s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:43:39] [vllm-llama] FAILED bf-9fb74e0fff/t2 (225.9s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:45:14] [vllm-llama] FAILED bf-9e1fff9250/t2 (316.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:49:27] [vllm-llama] FAILED bf-a6ecc2c171/t2 (346.4s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:51:03] [vllm-llama] FAILED bf-6fb17b7f3d/t2 (346.9s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:55:15] [vllm-llama] FAILED bf-dc4465e435/t2 (345.9s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[12:56:50] [vllm-llama] FAILED bf-0e2b33b21b/t2 (345.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:01:02] [vllm-llama] FAILED bf-0a8c20169a/t2 (345.3s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:02:39] [vllm-llama] FAILED bf-87f9ec55fa/t2 (346.3s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:06:51] [vllm-llama] FAILED bf-aedffb054a/t2 (347.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:07:00] [vllm-llama] FAILED bf-55f33faa82/t2 (259.3s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:07:21] [vllm-llama] FAILED bf-a9408e6a52/t2 (27.5s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:07:30] [vllm-llama] FAILED bf-fdfa344920/t2 (27.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:07:50] [vllm-llama] FAILED bf-bc7e63859f/t2 (27.5s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:08:00] [vllm-llama] FAILED bf-a45651184d/t2 (28.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:08:22] [vllm-llama] FAILED bf-d1228a30ce/t2 (29.9s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:08:33] [vllm-llama] FAILED bf-de888bed80/t2 (30.5s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:08:54] [vllm-llama] FAILED bf-ec1b0219ac/t2 (29.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:09:04] [vllm-llama] FAILED bf-712e20a246/t2 (29.0s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:09:26] [vllm-llama] FAILED bf-dd28f22b19/t2 (30.0s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:09:34] [vllm-llama] FAILED bf-14e00db503/t2 (28.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:09:57] [vllm-llama] FAILED bf-f6817f623b/t2 (29.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:10:07] [vllm-llama] FAILED bf-80a8d42d12/t2 (30.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:10:28] [vllm-llama] FAILED bf-36d4a10aa8/t2 (28.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:10:38] [vllm-llama] FAILED bf-51844d71db/t2 (29.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:10:59] [vllm-llama] FAILED bf-c40881c993/t2 (29.4s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:11:10] [vllm-llama] FAILED bf-472ca86db1/t2 (29.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:11:30] [vllm-llama] FAILED bf-6bd9e9e383/t2 (28.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:11:42] [vllm-llama] FAILED bf-ea4ca2ff65/t2 (30.4s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:12:01] [vllm-llama] FAILED bf-c97cd6fa17/t2 (28.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:12:14] [vllm-llama] FAILED bf-c664c596ed/t2 (29.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:12:33] [vllm-llama] FAILED bf-c75541fef6/t2 (30.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:12:45] [vllm-llama] FAILED bf-20474b5540/t2 (29.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:13:04] [vllm-llama] FAILED bf-fcb94dc80c/t2 (29.5s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:13:16] [vllm-llama] FAILED bf-8d95e11919/t2 (29.2s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:13:34] [vllm-llama] FAILED bf-b9eac17de3/t2 (28.1s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:13:48] [vllm-llama] FAILED bf-50f29af2ed/t2 (29.8s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:14:06] [vllm-llama] FAILED bf-77a2cbc3ee/t2 (29.7s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:14:19] [vllm-llama] FAILED bf-80db2fdd07/t2 (28.6s): litellm.InternalServerError: InternalServerError: OpenAIException - Connection error. LiteLLM Retried: 5 times
+[13:14:19] Finished in 6158.4s
+[13:14:19]   vllm-llama: 28 graded, 122 failed

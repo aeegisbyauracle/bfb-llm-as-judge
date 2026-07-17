@@ -172,6 +172,131 @@ async def test_grader_handles_missing_rubric_index(monkeypatch):
 
 
 @pytest.mark.asyncio
+async def test_grader_accepts_object_keyed_rubric(monkeypatch):
+    """Some OpenAI-compatible judges return rubric entries keyed by index."""
+
+    judge_payload = {
+        "final_answer_correct": "true",
+        "rubric": {
+            "1": {"satisfied": "true", "explanation": "Trace mentions AAPL"},
+            "2": {"satisfied": "false", "explanation": "No 10-K citation"},
+            "3": {"satisfied": True, "explanation": "Reported $114.3B"},
+        },
+    }
+    fake_response = _FakeResponse(
+        content=json.dumps(judge_payload),
+        prompt_tokens=1000,
+        completion_tokens=50,
+        cost=0.005,
+    )
+
+    async def fake_acompletion(**_kwargs):
+        return fake_response
+
+    monkeypatch.setenv("TINKER_API_KEY", "test-key")
+    monkeypatch.setattr(grader_module.litellm, "acompletion", fake_acompletion)
+
+    graded = await grade(
+        run=_make_run("bf-test-001"),
+        item=_make_item(),
+        judge_model_id="tinker:openai/gpt-oss-20b",
+    )
+    assert graded.final_answer_correct is True
+    assert graded.rubric_lines_earned == 2
+    assert graded.rubric_points_earned == 6
+    assert graded.rubric_lines[1].earned is False
+    assert graded.rubric_lines[1].judge_explanation == "No 10-K citation"
+
+
+@pytest.mark.asyncio
+async def test_grader_accepts_fenced_json_response(monkeypatch):
+    judge_payload = {
+        "final_answer_correct": True,
+        "rubric": [
+            {"index": 1, "satisfied": True, "explanation": "ok"},
+            {"index": 2, "satisfied": False, "explanation": "missing"},
+            {"index": 3, "satisfied": True, "explanation": "ok"},
+        ],
+    }
+    fake_response = _FakeResponse(
+        content=f"```json\n{json.dumps(judge_payload)}\n```",
+        prompt_tokens=1000,
+        completion_tokens=50,
+        cost=0.005,
+    )
+
+    async def fake_acompletion(**_kwargs):
+        return fake_response
+
+    monkeypatch.setattr(grader_module.litellm, "acompletion", fake_acompletion)
+
+    graded = await grade(
+        run=_make_run("bf-test-001"),
+        item=_make_item(),
+        judge_model_id="vertex:gemini-3.1-pro-preview",
+    )
+    assert graded.final_answer_correct is True
+    assert graded.rubric_lines_earned == 2
+
+
+@pytest.mark.asyncio
+async def test_grader_accepts_bare_key_pseudo_json_response(monkeypatch):
+    fake_response = _FakeResponse(
+        content=(
+            "{final_answer_correct: true, rubric: ["
+            "{index: 1, satisfied: true, explanation: \"ok\"},"
+            "{index: 2, satisfied: false, explanation: \"missing\"},"
+            "{index: 3, satisfied: true, explanation: \"ok\"}"
+            "]}"
+        ),
+        prompt_tokens=1000,
+        completion_tokens=50,
+        cost=0.005,
+    )
+
+    async def fake_acompletion(**_kwargs):
+        return fake_response
+
+    monkeypatch.setattr(grader_module.litellm, "acompletion", fake_acompletion)
+
+    graded = await grade(
+        run=_make_run("bf-test-001"),
+        item=_make_item(),
+        judge_model_id="vertex:gemini-3.1-pro-preview",
+    )
+    assert graded.final_answer_correct is True
+    assert graded.rubric_lines_earned == 2
+
+
+@pytest.mark.asyncio
+async def test_tinker_gpt_oss_20b_uses_smaller_generation_cap(monkeypatch):
+    judge_payload = {
+        "final_answer_correct": True,
+        "rubric": [
+            {"index": i, "satisfied": True, "explanation": "ok"}
+            for i in range(1, 4)
+        ],
+    }
+    fake_response = _FakeResponse(json.dumps(judge_payload), 1000, 50, 0.005)
+    captured = {}
+
+    async def fake_acompletion(**kwargs):
+        captured.update(kwargs)
+        return fake_response
+
+    monkeypatch.setenv("TINKER_API_KEY", "test-key")
+    monkeypatch.setattr(grader_module.litellm, "acompletion", fake_acompletion)
+
+    await grade(
+        run=_make_run("bf-test-001"),
+        item=_make_item(),
+        judge_model_id="tinker:openai/gpt-oss-20b",
+        max_output_tokens=16384,
+    )
+    assert captured["max_tokens"] == 4096
+
+
+@pytest.mark.asyncio
 async def test_grader_routes_nvidia_judge_without_changing_prompt(monkeypatch):
     judge_payload = {
         "final_answer_correct": True,

@@ -1,0 +1,27 @@
+[11:11:57] Log: grade-results/gpt55/gpt55.run.20260713_111157.log
+[11:11:57] Loaded 150 traces, 50 dataset items
+[11:11:57] Running 1 judge(s): tinker-gpt-oss-120b | concurrency=5/judge | delay=2.0s
+[11:11:57] [tinker-gpt-oss-120b] 150 remaining of 150 traces
+[11:12:06] [tinker-gpt-oss-120b] FAILED bf-39bacf8580/t0 (7.4s): Expecting value: line 1 column 1 (char 0)
+[11:12:08] [tinker-gpt-oss-120b] FAILED bf-3b698728de/t0 (8.6s): string indices must be integers, not 'str'
+[11:12:11] [tinker-gpt-oss-120b] FAILED bf-dfbfada14f/t0 (12.0s): Expecting value: line 1 column 1 (char 0)
+[11:12:11] [tinker-gpt-oss-120b] FAILED bf-5b4cd39939/t0 (12.1s): Expecting value: line 1 column 1 (char 0)
+[11:12:16] [tinker-gpt-oss-120b] 1/150 done (5/150) [16.5s]
+[11:12:17] [tinker-gpt-oss-120b] FAILED bf-d0e8d00008/t0 (7.5s): Expecting value: line 1 column 1 (char 0)
+[11:12:20] [tinker-gpt-oss-120b] FAILED bf-8ccf07aa37/t0 (7.0s): 'bool' object is not subscriptable
+[11:12:20] [tinker-gpt-oss-120b] FAILED bf-fc3be3969d/t0 (7.2s): string indices must be integers, not 'str'
+[11:12:22] [tinker-gpt-oss-120b] FAILED bf-a838bf1b8e/t0 (13.2s): string indices must be integers, not 'str'
+[11:12:27] [tinker-gpt-oss-120b] FAILED bf-2c01534176/t0 (9.2s): string indices must be integers, not 'str'
+[11:12:27] [tinker-gpt-oss-120b] 2/150 done (11/150) [4.6s]
+[11:12:27] [tinker-gpt-oss-120b] 3/150 done (12/150) [8.0s]
+[11:12:33] [tinker-gpt-oss-120b] 4/150 done (13/150) [11.4s]
+[11:12:33] [tinker-gpt-oss-120b] FAILED bf-a6ecc2c171/t0 (4.8s): Expecting value: line 1 column 1 (char 0)
+[11:12:39] [tinker-gpt-oss-120b] FAILED bf-9e1fff9250/t0 (15.1s): 'bool' object is not subscriptable
+[11:12:43] [tinker-gpt-oss-120b] 5/150 done (16/150) [14.0s]
+[11:12:47] [tinker-gpt-oss-120b] FAILED bf-0a8c20169a/t0 (11.3s): Expecting value: line 1 column 1 (char 0)
+[11:12:48] [tinker-gpt-oss-120b] 6/150 done (18/150) [18.8s]
+[11:12:49] [tinker-gpt-oss-120b] FAILED bf-aedffb054a/t0 (8.1s): Expecting value: line 1 column 1 (char 0)
+[11:12:54] [tinker-gpt-oss-120b] FAILED bf-0e2b33b21b/t0 (18.7s): Expecting value: line 1 column 1 (char 0)
+[11:13:06] [tinker-gpt-oss-120b] FAILED bf-bc7e63859f/t0 (9.8s): string indices must be integers, not 'str'
+[11:13:08] [tinker-gpt-oss-120b] FAILED bf-87f9ec55fa/t0 (23.0s): Expecting value: line 1 column 1 (char 0)
+[11:13:14] [tinker-gpt-oss-120b] FAILED bf-fdfa344920/t0 (22.6s): string indices must be integers, not 'str'

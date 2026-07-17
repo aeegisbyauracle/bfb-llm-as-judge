@@ -47,6 +47,8 @@ Install the harness and export the one key shared by all NVIDIA NIM models:
 ```bash
 python3 -m pip install -r requirements.txt
 export NVIDIA_API_KEY="nvapi-your-key"
+# Only needed for Tinker-hosted judge aliases:
+export TINKER_API_KEY="tinker-your-key"
 ```
 
 Available judge aliases:
@@ -57,6 +59,7 @@ Available judge aliases:
 | `qwen` | `qwen/qwen3-next-80b-a3b-instruct` |
 | `mistral` | `mistralai/mistral-medium-3.5-128b` |
 | `nemotron` | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning` |
+| `tinker-gpt-oss-20b` | `tinker:openai/gpt-oss-20b` |
 
 Smoke-test one released trace with Llama:
 

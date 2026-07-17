@@ -1,0 +1,7 @@
+[12:59:31] Log: grade-results/opus47/opus47.run.20260713_125931.log
+[12:59:31] Loaded 151 traces, 50 dataset items
+[12:59:31] Running 1 judge(s): tinker-gpt-oss-20b | concurrency=5/judge | delay=2.0s
+[12:59:31] [tinker-gpt-oss-20b] 1 remaining of 151 traces
+[13:00:19] [tinker-gpt-oss-20b] FAILED bf-50f29af2ed/t1 (46.0s): Could not parse judge response as JSON: line 1 column 1 (char 0)
+[13:00:19] Finished in 48.1s
+[13:00:19]   tinker-gpt-oss-20b: 0 graded, 1 failed

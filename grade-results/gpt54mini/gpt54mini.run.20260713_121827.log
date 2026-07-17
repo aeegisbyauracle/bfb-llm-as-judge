@@ -1,0 +1,7 @@
+[12:18:27] Log: grade-results/gpt54mini/gpt54mini.run.20260713_121827.log
+[12:18:27] Loaded 150 traces, 50 dataset items
+[12:18:27] Running 1 judge(s): tinker-gpt-oss-20b | concurrency=5/judge | delay=2.0s
+[12:18:27] [tinker-gpt-oss-20b] 1 remaining of 150 traces
+[12:18:53] [tinker-gpt-oss-20b] 1/1 done (1/1) [23.8s]
+[12:18:53] Finished in 25.8s
+[12:18:53]   tinker-gpt-oss-20b: 1 graded, 0 failed

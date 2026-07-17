@@ -29,6 +29,7 @@ JUDGES = {
     "qwen": "nvidia:qwen/qwen3-next-80b-a3b-instruct",
     "mistral": "nvidia:mistralai/mistral-medium-3.5-128b",
     "nemotron": "nvidia:nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "tinker-gpt-oss-20b": "tinker:openai/gpt-oss-20b",
 }
 
 

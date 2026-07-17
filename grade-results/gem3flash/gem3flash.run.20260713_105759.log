@@ -1,0 +1,15 @@
+[10:57:59] Log: grade-results/gem3flash/gem3flash.run.20260713_105759.log
+[10:57:59] Loaded 150 traces, 50 dataset items
+[10:57:59] Running 1 judge(s): tinker-kimi | concurrency=5/judge | delay=2.0s
+[10:57:59] [tinker-kimi] 150 remaining of 150 traces
+[10:58:31] [tinker-kimi] FAILED bf-39bacf8580/t0 (29.9s): Expecting value: line 1 column 1 (char 0)
+[10:58:55] [tinker-kimi] FAILED bf-3b698728de/t0 (54.2s): Expecting value: line 1 column 1 (char 0)
+[10:59:06] [tinker-kimi] FAILED bf-a838bf1b8e/t0 (33.4s): Expecting value: line 1 column 1 (char 0)
+[11:00:25] [tinker-kimi] FAILED bf-8ccf07aa37/t0 (76.4s): Expecting value: line 1 column 1 (char 0)
+[11:00:28] [tinker-kimi] FAILED bf-d0e8d00008/t0 (91.1s): Expecting value: line 1 column 1 (char 0)
+[11:01:38] [tinker-kimi] FAILED bf-5b4cd39939/t0 (216.6s): Expecting value: line 1 column 1 (char 0)
+[11:01:59] [tinker-kimi] FAILED bf-2c01534176/t0 (88.5s): Expecting value: line 1 column 1 (char 0)
+[11:02:14] [tinker-kimi] FAILED bf-fc3be3969d/t0 (107.3s): Expecting value: line 1 column 1 (char 0)
+[11:05:35] [tinker-kimi] FAILED bf-66ccc5d04a/t0 (235.6s): Expecting value: line 1 column 1 (char 0)
+[11:06:02] [tinker-kimi] FAILED bf-9fb74e0fff/t0 (226.0s): Expecting value: line 1 column 1 (char 0)
+[11:08:16] [tinker-kimi] FAILED bf-9e1fff9250/t0 (158.9s): Expecting value: line 1 column 1 (char 0)

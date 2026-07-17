@@ -1,0 +1,9 @@
+[11:02:48] Log: grade-results/sonnet46/sonnet46.run.20260713_110248.log
+[11:02:48] Loaded 151 traces, 50 dataset items
+[11:02:48] Running 1 judge(s): tinker-kimi | concurrency=5/judge | delay=2.0s
+[11:02:48] [tinker-kimi] 151 remaining of 151 traces
+[11:03:14] [tinker-kimi] FAILED bf-39bacf8580/t0 (24.7s): Expecting value: line 1 column 1 (char 0)
+[11:03:49] [tinker-kimi] FAILED bf-3b698728de/t0 (59.2s): Expecting value: line 1 column 1 (char 0)
+[11:07:14] [tinker-kimi] FAILED bf-d0e8d00008/t0 (203.5s): Expecting value: line 1 column 1 (char 0)
+[11:08:39] [tinker-kimi] FAILED bf-fc3be3969d/t0 (82.8s): Expecting value: line 1 column 1 (char 0)
+[11:08:44] [tinker-kimi] FAILED bf-5b4cd39939/t0 (354.2s): Expecting value: line 1 column 1 (char 0)

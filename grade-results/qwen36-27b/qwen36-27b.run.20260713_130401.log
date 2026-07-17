@@ -1,0 +1,6 @@
+[13:04:01] Log: grade-results/qwen36-27b/qwen36-27b.run.20260713_130401.log
+[13:04:01] Loaded 150 traces, 50 dataset items
+[13:04:01] Running 1 judge(s): tinker-gpt-oss-20b | concurrency=5/judge | delay=2.0s
+[13:04:01] [tinker-gpt-oss-20b] 0 remaining of 150 traces
+[13:04:01] Finished in 0.0s
+[13:04:01]   tinker-gpt-oss-20b: 0 graded, 0 failed

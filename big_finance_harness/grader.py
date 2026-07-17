@@ -20,7 +20,9 @@ report Cohen's kappa; this module grades with one judge per call.
 from __future__ import annotations
 
 import asyncio
+import ast
 import json
+import re
 from typing import Any
 
 import os
@@ -88,7 +90,7 @@ def _judge_semaphore(judge_model_id: str) -> asyncio.Semaphore:
     return _JUDGE_SEMAPHORES[judge_model_id]
 
 
-def _format_trace(steps: list[StepRecord]) -> str:
+def _format_trace(steps: list[StepRecord], max_chars: int = _MAX_TRACE_CHARS) -> str:
     """Render the trace as text for the judge, with per-element and total-size caps.
 
     For very long runs the unbounded trace can exceed the judge's context window.
@@ -118,13 +120,13 @@ def _format_trace(steps: list[StepRecord]) -> str:
             err = " [ERROR]" if tr.is_error else ""
             lines.append(f"tool_result{err}: {content}")
     text = "\n".join(lines)
-    if len(text) <= _MAX_TRACE_CHARS:
+    if len(text) <= max_chars:
         return text
     # Keep head + tail; drop middle. The model's first few tool calls show how it
     # approached the problem and the last few show the conclusion — both more
     # informative for grading than the middle.
-    head = text[: _MAX_TRACE_CHARS // 2]
-    tail = text[-_MAX_TRACE_CHARS // 2 :]
+    head = text[: max_chars // 2]
+    tail = text[-max_chars // 2 :]
     return f"{head}\n\n... [trace truncated for length] ...\n\n{tail}"
 
 
@@ -194,6 +196,93 @@ def _build_response_schema(num_rubric_lines: int) -> dict[str, Any]:
     }
 
 
+def _coerce_bool(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        normalized = value.strip().lower()
+        if normalized in {"true", "yes", "y", "1"}:
+            return True
+        if normalized in {"false", "no", "n", "0", ""}:
+            return False
+    return bool(value)
+
+
+def _rubric_entries(raw: Any) -> list[dict[str, Any]]:
+    """Normalize judge rubric output.
+
+    The requested schema is a list of objects, but OpenAI-compatible providers that
+    emulate strict JSON mode sometimes return an object keyed by rubric index. Accept
+    both shapes so a recoverable formatting variation does not fail the whole grade.
+    """
+    if isinstance(raw, list):
+        return [entry for entry in raw if isinstance(entry, dict)]
+    if isinstance(raw, dict):
+        entries: list[dict[str, Any]] = []
+        for key, value in raw.items():
+            if isinstance(value, dict):
+                entry = dict(value)
+                entry.setdefault("index", key)
+                entries.append(entry)
+            else:
+                entries.append({"index": key, "satisfied": value})
+        return entries
+    return []
+
+
+def _rubric_index(entry: dict[str, Any]) -> int | None:
+    index = entry.get("index")
+    if isinstance(index, int):
+        return index
+    if isinstance(index, str):
+        try:
+            return int(index.strip())
+        except ValueError:
+            return None
+    return None
+
+
+def _parse_judge_json(content: str) -> dict[str, Any]:
+    def parse_candidate(text: str) -> dict[str, Any] | None:
+        try:
+            parsed = json.loads(text)
+        except json.JSONDecodeError:
+            try:
+                parsed = ast.literal_eval(text)
+            except (SyntaxError, ValueError):
+                repaired = re.sub(r'([{,]\s*)([A-Za-z_][A-Za-z0-9_]*)\s*:', r'\1"\2":', text)
+                repaired = re.sub(r":\s*True\b", ": true", repaired)
+                repaired = re.sub(r":\s*False\b", ": false", repaired)
+                repaired = re.sub(r":\s*None\b", ": null", repaired)
+                try:
+                    parsed = json.loads(repaired)
+                except json.JSONDecodeError:
+                    return None
+        if not isinstance(parsed, dict):
+            raise ValueError("judge response JSON must be an object")
+        return parsed
+
+    text = content.strip()
+    candidates = [text]
+    if text.startswith("```"):
+        lines = text.splitlines()
+        if lines and lines[0].startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].startswith("```"):
+            lines = lines[:-1]
+        candidates.append("\n".join(lines).strip())
+    start = text.find("{")
+    end = text.rfind("}")
+    if start != -1 and end != -1 and start < end:
+        candidates.append(text[start : end + 1])
+
+    for candidate in candidates:
+        parsed = parse_candidate(candidate)
+        if parsed is not None:
+            return parsed
+    raise json.JSONDecodeError("Could not parse judge response as JSON", content, 0)
+
+
 async def grade(
     *,
     run: RunRecord,
@@ -220,7 +309,12 @@ async def grade(
     provider, snapshot = parse_model_id(judge_model_id)
     judge_model = _to_litellm_model(provider, snapshot)
 
-    trace = _format_trace(run.steps)
+    trace_char_limit = _MAX_TRACE_CHARS
+    if provider == "tinker" and snapshot == "openai/gpt-oss-20b":
+        trace_char_limit = 30_000
+        max_output_tokens = min(max_output_tokens, 4096)
+
+    trace = _format_trace(run.steps, max_chars=trace_char_limit)
     user_prompt = _judge_user_prompt(
         question=item.query,
         reference_answer=item.reference_answer,
@@ -299,7 +393,7 @@ async def grade(
             else:
                 raise
     content = response.choices[0].message.content or "{}"
-    parsed = json.loads(content)
+    parsed = _parse_judge_json(content)
 
     # Capture judge-side accounting. LiteLLM stamps `_hidden_params["response_cost"]`
     # with a USD estimate; usage carries token counts. We surface these on `GradedRun`
@@ -312,8 +406,12 @@ async def grade(
     judge_cost = hidden.get("response_cost")
     judge_cost_usd = float(judge_cost) if judge_cost is not None else None
 
-    final_correct: bool = bool(parsed.get("final_answer_correct", False))
-    by_index = {entry["index"]: entry for entry in parsed.get("rubric", [])}
+    final_correct = _coerce_bool(parsed.get("final_answer_correct", False))
+    by_index = {
+        index: entry
+        for entry in _rubric_entries(parsed.get("rubric", []))
+        if (index := _rubric_index(entry)) is not None
+    }
 
     graded: list[GradedRubricLine] = []
     points_earned = 0
@@ -321,7 +419,7 @@ async def grade(
     lines_earned = 0
     for i, line in enumerate(item.rubric):
         entry = by_index.get(i + 1, {"satisfied": False, "explanation": "missing"})
-        satisfied = bool(entry.get("satisfied", False))
+        satisfied = _coerce_bool(entry.get("satisfied", False))
         graded.append(
             GradedRubricLine(
                 text=line.text,

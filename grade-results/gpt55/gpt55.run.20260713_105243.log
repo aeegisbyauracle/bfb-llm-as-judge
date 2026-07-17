@@ -1,0 +1,11 @@
+[10:52:43] Log: grade-results/gpt55/gpt55.run.20260713_105243.log
+[10:52:43] Loaded 150 traces, 50 dataset items
+[10:52:43] Running 1 judge(s): tinker-kimi | concurrency=5/judge | delay=2.0s
+[10:52:43] [tinker-kimi] 150 remaining of 150 traces
+[10:54:00] [tinker-kimi] FAILED bf-3b698728de/t0 (74.4s): Expecting value: line 1 column 1 (char 0)
+[10:54:00] [tinker-kimi] FAILED bf-39bacf8580/t0 (74.7s): Expecting value: line 1 column 1 (char 0)
+[10:54:38] [tinker-kimi] FAILED bf-5b4cd39939/t0 (113.1s): Expecting value: line 1 column 1 (char 0)
+[10:56:26] [tinker-kimi] FAILED bf-8ccf07aa37/t0 (106.2s): Expecting value: line 1 column 1 (char 0)
+[10:58:05] [tinker-kimi] 1/150 done (5/150) [97.0s]
+[10:59:58] [tinker-kimi] FAILED bf-d0e8d00008/t0 (356.2s): Expecting value: line 1 column 1 (char 0)
+[11:05:47] [tinker-kimi] FAILED bf-66ccc5d04a/t0 (346.9s): Expecting value: line 1 column 1 (char 0)

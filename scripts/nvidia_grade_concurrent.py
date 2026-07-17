@@ -30,6 +30,7 @@ JUDGES = {
     "tinker-qwen397b": "tinker:Qwen/Qwen3.5-397B-A17B:peft:262144",
     "tinker-qwen35b": "tinker:Qwen/Qwen3.6-35B-A3B",
     "tinker-kimi": "tinker:moonshotai/Kimi-K2.6:peft:131072",
+    "tinker-gpt-oss-20b": "tinker:openai/gpt-oss-20b",
     "vllm-llama": "vllm:meta-llama/Llama-3.3-70B-Instruct",
 }
 

@@ -20,6 +20,7 @@ JUDGES = {
     "qwen": "nvidia:qwen/qwen3-next-80b-a3b-instruct",
     "mistral": "nvidia:mistralai/mistral-medium-3.5-128b",
     "nemotron": "nvidia:nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "tinker-gpt-oss-20b": "tinker:openai/gpt-oss-20b",
 }
 
 
@@ -40,6 +41,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--sample-seed", type=int, default=0)
     parser.add_argument("--concurrency", type=int, default=1)
     parser.add_argument("--max-output-tokens", type=int, default=16384)
+    parser.add_argument("--num-retries", type=int, default=20)
+    parser.add_argument("--request-timeout", type=int, default=1800)
     parser.add_argument(
         "--question-delay-seconds",
         type=float,
@@ -73,6 +76,10 @@ async def run(args: argparse.Namespace) -> int:
         raise ValueError("--question-delay-seconds cannot be negative")
     if args.sample_n is not None and args.sample_n < 1:
         raise ValueError("--sample-n must be at least 1")
+    if args.num_retries < 0:
+        raise ValueError("--num-retries cannot be negative")
+    if args.request_timeout < 1:
+        raise ValueError("--request-timeout must be at least 1")
 
     judge_model_id = JUDGES[args.judge]
     output = args.output or default_output_path(args.traces, args.judge)
@@ -120,6 +127,8 @@ async def run(args: argparse.Namespace) -> int:
                     item=item,
                     judge_model_id=judge_model_id,
                     max_output_tokens=args.max_output_tokens,
+                    num_retries=args.num_retries,
+                    request_timeout=args.request_timeout,
                 )
             except Exception as exc:
                 counters["failed"] += 1
