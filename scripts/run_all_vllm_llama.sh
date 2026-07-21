@@ -23,7 +23,8 @@ for t in "${TRACES[@]}"; do
         --traces "data/raw/traces/${t}.traces.jsonl" \
         --judge vllm-llama \
         --concurrency 1 \
-        --delay 1.0
+        --delay 1.0 \
+        --max-output-tokens 4096
     echo "Finished: $t"
     echo ""
 done
