@@ -1,0 +1,2 @@
+candidate_judge,ground_truth_judge,comparison_type,overlap_rows,missing_candidate_rows,missing_truth_rows,final_answer_compared,final_answer_agreement,final_answer_tp,final_answer_fp,final_answer_tn,final_answer_fn,rubric_line_compared,rubric_line_agreement,rubric_vector_compared,rubric_vector_agreement,rubric_length_mismatches,points_mae,normalized_points_mae,points_pearson,normalized_points_pearson
+gemini,opus,paper_judge_baseline,1500,0,0,1500,0.992667,496,6,993,5,23790,0.910298,1500,0.536667,0,2.500000,0.064381,0.929580,0.930416

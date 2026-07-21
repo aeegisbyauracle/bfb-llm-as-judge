@@ -1,0 +1,5 @@
+judge,expected_files,complete_files,incomplete_files,is_complete,issues
+tinker,10,7,3,False,"gem31pro: 149 rows, expected 150; 149 unique keys, expected 150 | opus47: 149 unique keys, expected 150; 1 duplicate key row(s) | sonnet46: 151 rows, expected 150; 1 duplicate key row(s)"
+qwen,10,8,2,False,"opus47: 149 unique keys, expected 150; 1 duplicate key row(s) | sonnet46: 149 unique keys, expected 150; 1 duplicate key row(s)"
+llama,10,6,4,False,"kimi-k26: 142 rows, expected 150; 142 unique keys, expected 150 | opus47: missing file: vllm-llama.jsonl | qwen36-27b: missing file: vllm-llama.jsonl | sonnet46: 149 rows, expected 150; 149 unique keys, expected 150"
+nemotron,10,8,2,False,"opus47: 149 unique keys, expected 150; 1 duplicate key row(s) | sonnet46: 151 rows, expected 150; 1 duplicate key row(s)"

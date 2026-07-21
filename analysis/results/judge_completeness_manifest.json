@@ -1,0 +1,25 @@
+{
+  "trace_labels": [
+    "gem31pro",
+    "gem3flash",
+    "gemma4-31b",
+    "glm-51",
+    "gpt54mini",
+    "gpt55",
+    "kimi-k26",
+    "opus47",
+    "qwen36-27b",
+    "sonnet46"
+  ],
+  "judge_files": {
+    "tinker": "tinker-gpt-oss-20b.jsonl",
+    "qwen": "nvidia-qwen.jsonl",
+    "llama": "vllm-llama.jsonl",
+    "nemotron": "nvidia-nemotron.jsonl"
+  },
+  "expected_rows": 150,
+  "outputs": {
+    "by_file": "analysis/results/judge_completeness_by_file.csv",
+    "summary": "analysis/results/judge_completeness_summary.csv"
+  }
+}

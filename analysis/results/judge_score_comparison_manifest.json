@@ -1,0 +1,31 @@
+{
+  "trace_labels": [
+    "gem31pro",
+    "gem3flash",
+    "gemma4-31b",
+    "glm-51",
+    "gpt54mini",
+    "gpt55",
+    "kimi-k26",
+    "opus47",
+    "qwen36-27b",
+    "sonnet46"
+  ],
+  "judge_files": {
+    "tinker": "tinker-gpt-oss-20b.jsonl",
+    "qwen": "nvidia-qwen.jsonl",
+    "llama": "vllm-llama.jsonl",
+    "nemotron": "nvidia-nemotron.jsonl"
+  },
+  "missing_files": [
+    "grade-results/opus47/vllm-llama.jsonl",
+    "grade-results/qwen36-27b/vllm-llama.jsonl"
+  ],
+  "outputs": {
+    "by_trace": "analysis/results/judge_scores_by_trace.csv",
+    "wide_by_trace": "analysis/results/judge_score_wide_by_trace.csv",
+    "pairwise_deltas_by_trace": "analysis/results/judge_pairwise_deltas_by_trace.csv",
+    "by_item": "analysis/results/judge_scores_by_item.csv",
+    "score_heatmap": "analysis/results/plots/judge_scores_by_trace_heatmap.svg"
+  }
+}

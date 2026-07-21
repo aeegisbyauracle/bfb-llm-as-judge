@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="704" height="454" viewBox="0 0 704 454">
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#202124}
+.title{font-size:20px;font-weight:700}
+.axis{font-size:12px;font-weight:600}
+.tick{font-size:11px}
+.cell{font-size:11px;font-weight:700}
+.muted{fill:#5f6368}
+</style>
+<rect width="100%" height="100%" fill="white"/>
+<text class="title" x="24" y="34">Judge Scores by Trace</text>
+<text class="muted tick" x="24" y="54">Average normalized rubric score</text>
+<text class="axis" x="170.0" y="58" text-anchor="middle">tinker</text>
+<text class="axis" x="274.0" y="58" text-anchor="middle">qwen</text>
+<text class="axis" x="378.0" y="58" text-anchor="middle">llama</text>
+<text class="axis" x="482.0" y="58" text-anchor="middle">nemotron</text>
+<text class="tick" x="106" y="96.0" text-anchor="end">gem31pro</text>
+<rect x="118" y="76" width="104" height="32" fill="#f7fcf5" stroke="#ffffff"/>
+<text class="cell" x="170.0" y="96.0" text-anchor="middle" fill="#202124">0%</text>
+<rect x="222" y="76" width="104" height="32" fill="#76c578" stroke="#ffffff"/>
+<text class="cell" x="274.0" y="96.0" text-anchor="middle" fill="#202124">49%</text>
+<rect x="326" y="76" width="104" height="32" fill="#50a361" stroke="#ffffff"/>
+<text class="cell" x="378.0" y="96.0" text-anchor="middle" fill="#ffffff">65%</text>
+<rect x="430" y="76" width="104" height="32" fill="#70c074" stroke="#ffffff"/>
+<text class="cell" x="482.0" y="96.0" text-anchor="middle" fill="#202124">52%</text>
+<text class="tick" x="106" y="128.0" text-anchor="end">gem3flash</text>
+<rect x="118" y="108" width="104" height="32" fill="#f2f2f2" stroke="#ffffff"/>
+<text class="cell" x="170.0" y="128.0" text-anchor="middle" fill="#202124">missing</text>
+<rect x="222" y="108" width="104" height="32" fill="#72c375" stroke="#ffffff"/>
+<text class="cell" x="274.0" y="128.0" text-anchor="middle" fill="#202124">51%</text>
+<rect x="326" y="108" width="104" height="32" fill="#94d295" stroke="#ffffff"/>
+<text class="cell" x="378.0" y="128.0" text-anchor="middle" fill="#202124">38%</text>
+<rect x="430" y="108" width="104" height="32" fill="#6dbd72" stroke="#ffffff"/>
+<text class="cell" x="482.0" y="128.0" text-anchor="middle" fill="#202124">53%</text>
+<text class="tick" x="106" y="160.0" text-anchor="end">gemma4-31b</text>
+<rect x="118" y="140" width="104" height="32" fill="#f7fcf5" stroke="#ffffff"/>
+<text class="cell" x="170.0" y="160.0" text-anchor="middle" fill="#202124">0%</text>
+<rect x="222" y="140" width="104" height="32" fill="#84cb85" stroke="#ffffff"/>
+<text class="cell" x="274.0" y="160.0" text-anchor="middle" fill="#202124">44%</text>
+<rect x="326" y="140" width="104" height="32" fill="#98d499" stroke="#ffffff"/>
+<text class="cell" x="378.0" y="160.0" text-anchor="middle" fill="#202124">36%</text>
+<rect x="430" y="140" width="104" height="32" fill="#84cb85" stroke="#ffffff"/>
+<text class="cell" x="482.0" y="160.0" text-anchor="middle" fill="#202124">44%</text>
+<text class="tick" x="106" y="192.0" text-anchor="end">glm-51</text>
+<rect x="118" y="172" width="104" height="32" fill="#f4fbf2" stroke="#ffffff"/>
+<text class="cell" x="170.0" y="192.0" text-anchor="middle" fill="#202124">1%</text>
+<rect x="222" y="172" width="104" height="32" fill="#4b9e5e" stroke="#ffffff"/>
+<text class="cell" x="274.0" y="192.0" text-anchor="middle" fill="#ffffff">68%</text>
+<rect x="326" y="172" width="104" height="32" fill="#5daf68" stroke="#ffffff"/>
+<text class="cell" x="378.0" y="192.0" text-anchor="middle" fill="#202124">60%</text>
+<rect x="430" y="172" width="104" height="32" fill="#4c9f5e" stroke="#ffffff"/>
+<text class="cell" x="482.0" y="192.0" text-anchor="middle" fill="#ffffff">67%</text>
+<text class="tick" x="106" y="224.0" text-anchor="end">gpt54mini</text>
+<rect x="118" y="204" width="104" height="32" fill="#f2f2f2" stroke="#ffffff"/>
+<text class="cell" x="170.0" y="224.0" text-anchor="middle" fill="#202124">missing</text>
+<rect x="222" y="204" width="104" height="32" fill="#a9dba9" stroke="#ffffff"/>
+<text class="cell" x="274.0" y="224.0" text-anchor="middle" fill="#202124">30%</text>
+<rect x="326" y="204" width="104" height="32" fill="#bfe4be" stroke="#ffffff"/>
+<text class="cell" x="378.0" y="224.0" text-anchor="middle" fill="#202124">22%</text>
+<rect x="430" y="204" width="104" height="32" fill="#a7daa7" stroke="#ffffff"/>
+<text class="cell" x="482.0" y="224.0" text-anchor="middle" fill="#202124">31%</text>
+<text class="tick" x="106" y="256.0" text-anchor="end">gpt55</text>
+<rect x="118" y="236" width="104" height="32" fill="#f5fbf3" stroke="#ffffff"/>
+<text class="cell" x="170.0" y="256.0" text-anchor="middle" fill="#202124">1%</text>
+<rect x="222" y="236" width="104" height="32" fill="#439759" stroke="#ffffff"/>
+<text class="cell" x="274.0" y="256.0" text-anchor="middle" fill="#ffffff">71%</text>
+<rect x="326" y="236" width="104" height="32" fill="#70c074" stroke="#ffffff"/>
+<text class="cell" x="378.0" y="256.0" text-anchor="middle" fill="#202124">52%</text>
+<rect x="430" y="236" width="104" height="32" fill="#489c5c" stroke="#ffffff"/>
+<text class="cell" x="482.0" y="256.0" text-anchor="middle" fill="#ffffff">69%</text>
+<text class="tick" x="106" y="288.0" text-anchor="end">kimi-k26</text>
+<rect x="118" y="268" width="104" height="32" fill="#f2f2f2" stroke="#ffffff"/>
+<text class="cell" x="170.0" y="288.0" text-anchor="middle" fill="#202124">missing</text>
+<rect x="222" y="268" width="104" height="32" fill="#5eb069" stroke="#ffffff"/>
+<text class="cell" x="274.0" y="288.0" text-anchor="middle" fill="#202124">60%</text>
+<rect x="326" y="268" width="104" height="32" fill="#67b96f" stroke="#ffffff"/>
+<text class="cell" x="378.0" y="288.0" text-anchor="middle" fill="#202124">55%</text>
+<rect x="430" y="268" width="104" height="32" fill="#67b86e" stroke="#ffffff"/>
+<text class="cell" x="482.0" y="288.0" text-anchor="middle" fill="#202124">56%</text>
+<text class="tick" x="106" y="320.0" text-anchor="end">opus47</text>
+<rect x="118" y="300" width="104" height="32" fill="#f4fbf2" stroke="#ffffff"/>
+<text class="cell" x="170.0" y="320.0" text-anchor="middle" fill="#202124">1%</text>
+<rect x="222" y="300" width="104" height="32" fill="#45995b" stroke="#ffffff"/>
+<text class="cell" x="274.0" y="320.0" text-anchor="middle" fill="#ffffff">70%</text>
+<rect x="326" y="300" width="104" height="32" fill="#f2f2f2" stroke="#ffffff"/>
+<text class="cell" x="378.0" y="320.0" text-anchor="middle" fill="#202124">missing</text>
+<rect x="430" y="300" width="104" height="32" fill="#4fa260" stroke="#ffffff"/>
+<text class="cell" x="482.0" y="320.0" text-anchor="middle" fill="#ffffff">66%</text>
+<text class="tick" x="106" y="352.0" text-anchor="end">qwen36-27b</text>
+<rect x="118" y="332" width="104" height="32" fill="#f5fbf3" stroke="#ffffff"/>
+<text class="cell" x="170.0" y="352.0" text-anchor="middle" fill="#202124">1%</text>
+<rect x="222" y="332" width="104" height="32" fill="#5cae68" stroke="#ffffff"/>
+<text class="cell" x="274.0" y="352.0" text-anchor="middle" fill="#202124">60%</text>
+<rect x="326" y="332" width="104" height="32" fill="#f2f2f2" stroke="#ffffff"/>
+<text class="cell" x="378.0" y="352.0" text-anchor="middle" fill="#202124">missing</text>
+<rect x="430" y="332" width="104" height="32" fill="#64b56d" stroke="#ffffff"/>
+<text class="cell" x="482.0" y="352.0" text-anchor="middle" fill="#202124">57%</text>
+<text class="tick" x="106" y="384.0" text-anchor="end">sonnet46</text>
+<rect x="118" y="364" width="104" height="32" fill="#f2faf0" stroke="#ffffff"/>
+<text class="cell" x="170.0" y="384.0" text-anchor="middle" fill="#202124">2%</text>
+<rect x="222" y="364" width="104" height="32" fill="#429658" stroke="#ffffff"/>
+<text class="cell" x="274.0" y="384.0" text-anchor="middle" fill="#ffffff">72%</text>
+<rect x="326" y="364" width="104" height="32" fill="#2e844d" stroke="#ffffff"/>
+<text class="cell" x="378.0" y="384.0" text-anchor="middle" fill="#ffffff">80%</text>
+<rect x="430" y="364" width="104" height="32" fill="#56a965" stroke="#ffffff"/>
+<text class="cell" x="482.0" y="384.0" text-anchor="middle" fill="#ffffff">63%</text>
+<text class="axis" x="568" y="62">Score</text>
+<rect x="568" y="76" width="24" height="18" fill="#f7fcf5" stroke="#ffffff"/>
+<text class="tick" x="600" y="89">0%</text>
+<rect x="568" y="102" width="24" height="18" fill="#b6e0b6" stroke="#ffffff"/>
+<text class="tick" x="600" y="115">25%</text>
+<rect x="568" y="128" width="24" height="18" fill="#74c476" stroke="#ffffff"/>
+<text class="tick" x="600" y="141">50%</text>
+<rect x="568" y="154" width="24" height="18" fill="#3a8f54" stroke="#ffffff"/>
+<text class="tick" x="600" y="167">75%</text>
+<rect x="568" y="180" width="24" height="18" fill="#005a32" stroke="#ffffff"/>
+<text class="tick" x="600" y="193">100%</text>
+<rect x="568" y="216" width="24" height="18" fill="#f2f2f2" stroke="#d0d0d0"/>
+<text class="tick" x="600" y="229">missing</text>
+</svg>

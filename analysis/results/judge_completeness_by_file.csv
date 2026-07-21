@@ -1,0 +1,41 @@
+judge,trace_label,expected_file,exists,row_count,unique_key_count,duplicate_key_rows,missing_key_rows,invalid_json_rows,duplicate_keys,is_complete,issues
+tinker,gem31pro,grade-results/gem31pro/tinker-gpt-oss-20b.jsonl,True,149,149,0,0,0,,False,"149 rows, expected 150; 149 unique keys, expected 150"
+tinker,gem3flash,grade-results/gem3flash/tinker-gpt-oss-20b.jsonl,True,150,150,0,0,0,,True,
+tinker,gemma4-31b,grade-results/gemma4-31b/tinker-gpt-oss-20b.jsonl,True,150,150,0,0,0,,True,
+tinker,glm-51,grade-results/glm-51/tinker-gpt-oss-20b.jsonl,True,150,150,0,0,0,,True,
+tinker,gpt54mini,grade-results/gpt54mini/tinker-gpt-oss-20b.jsonl,True,150,150,0,0,0,,True,
+tinker,gpt55,grade-results/gpt55/tinker-gpt-oss-20b.jsonl,True,150,150,0,0,0,,True,
+tinker,kimi-k26,grade-results/kimi-k26/tinker-gpt-oss-20b.jsonl,True,150,150,0,0,0,,True,
+tinker,opus47,grade-results/opus47/tinker-gpt-oss-20b.jsonl,True,150,149,1,0,0,bf-a838bf1b8e:1,False,"149 unique keys, expected 150; 1 duplicate key row(s)"
+tinker,qwen36-27b,grade-results/qwen36-27b/tinker-gpt-oss-20b.jsonl,True,150,150,0,0,0,,True,
+tinker,sonnet46,grade-results/sonnet46/tinker-gpt-oss-20b.jsonl,True,151,150,1,0,0,bf-d1228a30ce:0,False,"151 rows, expected 150; 1 duplicate key row(s)"
+qwen,gem31pro,grade-results/gem31pro/nvidia-qwen.jsonl,True,150,150,0,0,0,,True,
+qwen,gem3flash,grade-results/gem3flash/nvidia-qwen.jsonl,True,150,150,0,0,0,,True,
+qwen,gemma4-31b,grade-results/gemma4-31b/nvidia-qwen.jsonl,True,150,150,0,0,0,,True,
+qwen,glm-51,grade-results/glm-51/nvidia-qwen.jsonl,True,150,150,0,0,0,,True,
+qwen,gpt54mini,grade-results/gpt54mini/nvidia-qwen.jsonl,True,150,150,0,0,0,,True,
+qwen,gpt55,grade-results/gpt55/nvidia-qwen.jsonl,True,150,150,0,0,0,,True,
+qwen,kimi-k26,grade-results/kimi-k26/nvidia-qwen.jsonl,True,150,150,0,0,0,,True,
+qwen,opus47,grade-results/opus47/nvidia-qwen.jsonl,True,150,149,1,0,0,bf-a838bf1b8e:1,False,"149 unique keys, expected 150; 1 duplicate key row(s)"
+qwen,qwen36-27b,grade-results/qwen36-27b/nvidia-qwen.jsonl,True,150,150,0,0,0,,True,
+qwen,sonnet46,grade-results/sonnet46/nvidia-qwen.jsonl,True,150,149,1,0,0,bf-d1228a30ce:0,False,"149 unique keys, expected 150; 1 duplicate key row(s)"
+llama,gem31pro,grade-results/gem31pro/vllm-llama.jsonl,True,150,150,0,0,0,,True,
+llama,gem3flash,grade-results/gem3flash/vllm-llama.jsonl,True,150,150,0,0,0,,True,
+llama,gemma4-31b,grade-results/gemma4-31b/vllm-llama.jsonl,True,150,150,0,0,0,,True,
+llama,glm-51,grade-results/glm-51/vllm-llama.jsonl,True,150,150,0,0,0,,True,
+llama,gpt54mini,grade-results/gpt54mini/vllm-llama.jsonl,True,150,150,0,0,0,,True,
+llama,gpt55,grade-results/gpt55/vllm-llama.jsonl,True,150,150,0,0,0,,True,
+llama,kimi-k26,grade-results/kimi-k26/vllm-llama.jsonl,True,142,142,0,0,0,,False,"142 rows, expected 150; 142 unique keys, expected 150"
+llama,opus47,grade-results/opus47/vllm-llama.jsonl,False,0,0,0,0,0,,False,missing file: vllm-llama.jsonl
+llama,qwen36-27b,grade-results/qwen36-27b/vllm-llama.jsonl,False,0,0,0,0,0,,False,missing file: vllm-llama.jsonl
+llama,sonnet46,grade-results/sonnet46/vllm-llama.jsonl,True,149,149,0,0,0,,False,"149 rows, expected 150; 149 unique keys, expected 150"
+nemotron,gem31pro,grade-results/gem31pro/nvidia-nemotron.jsonl,True,150,150,0,0,0,,True,
+nemotron,gem3flash,grade-results/gem3flash/nvidia-nemotron.jsonl,True,150,150,0,0,0,,True,
+nemotron,gemma4-31b,grade-results/gemma4-31b/nvidia-nemotron.jsonl,True,150,150,0,0,0,,True,
+nemotron,glm-51,grade-results/glm-51/nvidia-nemotron.jsonl,True,150,150,0,0,0,,True,
+nemotron,gpt54mini,grade-results/gpt54mini/nvidia-nemotron.jsonl,True,150,150,0,0,0,,True,
+nemotron,gpt55,grade-results/gpt55/nvidia-nemotron.jsonl,True,150,150,0,0,0,,True,
+nemotron,kimi-k26,grade-results/kimi-k26/nvidia-nemotron.jsonl,True,150,150,0,0,0,,True,
+nemotron,opus47,grade-results/opus47/nvidia-nemotron.jsonl,True,150,149,1,0,0,bf-a838bf1b8e:1,False,"149 unique keys, expected 150; 1 duplicate key row(s)"
+nemotron,qwen36-27b,grade-results/qwen36-27b/nvidia-nemotron.jsonl,True,150,150,0,0,0,,True,
+nemotron,sonnet46,grade-results/sonnet46/nvidia-nemotron.jsonl,True,151,150,1,0,0,bf-d1228a30ce:0,False,"151 rows, expected 150; 1 duplicate key row(s)"

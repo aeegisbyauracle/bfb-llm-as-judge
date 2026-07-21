@@ -1,0 +1,9 @@
+candidate_judge,ground_truth_judge,comparison_type,candidate_files_loaded,candidate_files_expected,overlap_rows,missing_candidate_rows,missing_truth_rows,final_answer_compared,final_answer_agreement,final_answer_tp,final_answer_fp,final_answer_tn,final_answer_fn,rubric_line_compared,rubric_line_agreement,rubric_vector_compared,rubric_vector_agreement,rubric_length_mismatches,points_mae,normalized_points_mae,points_pearson,normalized_points_pearson
+tinker,gemini,available_rows_diagnostic,10,10,1498,2,0,1498,0.664887,0,0,996,502,23721,0.510645,1498,0.141522,0,15.537383,0.449878,0.141398,0.066437
+tinker,opus,available_rows_diagnostic,10,10,1498,2,0,1498,0.665554,0,0,997,501,23721,0.472029,1498,0.118158,0,16.425901,0.476500,0.162290,0.072518
+qwen,gemini,available_rows_diagnostic,10,10,1498,2,0,1498,0.972630,492,33,965,8,23768,0.806799,1498,0.399866,0,6.425901,0.157670,0.787881,0.800356
+qwen,opus,available_rows_diagnostic,10,10,1498,2,0,1498,0.977303,495,30,969,4,23768,0.844413,1498,0.438585,0,5.475300,0.130406,0.825749,0.841511
+llama,gemini,available_rows_diagnostic,8,10,1191,309,0,1191,0.775819,377,262,547,5,18872,0.730341,1191,0.310663,0,9.377834,0.231647,0.636990,0.607373
+llama,opus,available_rows_diagnostic,8,10,1191,309,0,1191,0.780017,380,259,549,3,18872,0.745125,1191,0.340050,0,8.959698,0.219943,0.645646,0.623039
+nemotron,gemini,available_rows_diagnostic,10,10,1499,1,0,1499,0.957305,493,56,942,8,23779,0.795660,1499,0.415610,0,7.360907,0.166902,0.677362,0.723483
+nemotron,opus,available_rows_diagnostic,10,10,1499,1,0,1499,0.956638,492,57,942,8,23779,0.806594,1499,0.410941,0,6.981988,0.159871,0.706481,0.728673

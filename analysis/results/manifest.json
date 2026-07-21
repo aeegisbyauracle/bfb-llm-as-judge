@@ -1,0 +1,137 @@
+{
+  "trace_labels": [
+    "gem31pro",
+    "gem3flash",
+    "gemma4-31b",
+    "glm-51",
+    "gpt54mini",
+    "gpt55",
+    "kimi-k26",
+    "opus47",
+    "qwen36-27b",
+    "sonnet46"
+  ],
+  "expected_rows_per_candidate_file": 150,
+  "included_candidate_judges": {},
+  "excluded_candidate_judges": {
+    "tinker": [
+      "gem31pro: 149 rows, expected 150",
+      "gem31pro: 149 unique keys, expected 150",
+      "opus47: 149 unique keys, expected 150",
+      "opus47: 1 duplicate key row(s)",
+      "sonnet46: 151 rows, expected 150",
+      "sonnet46: 1 duplicate key row(s)"
+    ],
+    "qwen": [
+      "opus47: 149 unique keys, expected 150",
+      "opus47: 1 duplicate key row(s)",
+      "sonnet46: 149 unique keys, expected 150",
+      "sonnet46: 1 duplicate key row(s)"
+    ],
+    "llama": [
+      "kimi-k26: 142 rows, expected 150",
+      "kimi-k26: 142 unique keys, expected 150",
+      "opus47: missing vllm-llama.jsonl",
+      "qwen36-27b: missing vllm-llama.jsonl",
+      "sonnet46: 149 rows, expected 150",
+      "sonnet46: 149 unique keys, expected 150"
+    ],
+    "nemotron": [
+      "opus47: 149 unique keys, expected 150",
+      "opus47: 1 duplicate key row(s)",
+      "sonnet46: 151 rows, expected 150",
+      "sonnet46: 1 duplicate key row(s)"
+    ]
+  },
+  "duplicate_rows_last_row_kept": {
+    "ground_truth:gemini": {
+      "gem31pro": 0,
+      "gem3flash": 0,
+      "gemma4-31b": 0,
+      "glm-51": 0,
+      "gpt54mini": 0,
+      "gpt55": 0,
+      "kimi-k26": 0,
+      "opus47": 0,
+      "qwen36-27b": 0,
+      "sonnet46": 1,
+      "total": 1
+    },
+    "ground_truth:opus": {
+      "gem31pro": 0,
+      "gem3flash": 0,
+      "gemma4-31b": 0,
+      "glm-51": 0,
+      "gpt54mini": 0,
+      "gpt55": 0,
+      "kimi-k26": 0,
+      "opus47": 1,
+      "qwen36-27b": 0,
+      "sonnet46": 1,
+      "total": 2
+    },
+    "available_candidate:tinker": {
+      "gem31pro": 0,
+      "gem3flash": 0,
+      "gemma4-31b": 0,
+      "glm-51": 0,
+      "gpt54mini": 0,
+      "gpt55": 0,
+      "kimi-k26": 0,
+      "opus47": 1,
+      "qwen36-27b": 0,
+      "sonnet46": 1,
+      "total": 2
+    },
+    "available_candidate:qwen": {
+      "gem31pro": 0,
+      "gem3flash": 0,
+      "gemma4-31b": 0,
+      "glm-51": 0,
+      "gpt54mini": 0,
+      "gpt55": 0,
+      "kimi-k26": 0,
+      "opus47": 1,
+      "qwen36-27b": 0,
+      "sonnet46": 1,
+      "total": 2
+    },
+    "available_candidate:llama": {
+      "gem31pro": 0,
+      "gem3flash": 0,
+      "gemma4-31b": 0,
+      "glm-51": 0,
+      "gpt54mini": 0,
+      "gpt55": 0,
+      "kimi-k26": 0,
+      "sonnet46": 0,
+      "total": 0
+    },
+    "available_candidate:nemotron": {
+      "gem31pro": 0,
+      "gem3flash": 0,
+      "gemma4-31b": 0,
+      "glm-51": 0,
+      "gpt54mini": 0,
+      "gpt55": 0,
+      "kimi-k26": 0,
+      "opus47": 1,
+      "qwen36-27b": 0,
+      "sonnet46": 1,
+      "total": 2
+    }
+  },
+  "outputs": {
+    "summary_by_judge": "analysis/results/summary_by_judge.csv",
+    "summary_by_trace": "analysis/results/summary_by_trace.csv",
+    "available_summary_by_judge": "analysis/results/available_summary_by_judge.csv",
+    "plots": {
+      "paper_judge_baseline": "analysis/results/plots/paper_judge_baseline.png",
+      "candidate_completeness": "analysis/results/plots/candidate_completeness.png",
+      "candidate_exclusion_issues": "analysis/results/plots/candidate_exclusion_issues.png",
+      "available_final_answer_agreement_by_judge": "analysis/results/plots/available_final_answer_agreement_by_judge.png",
+      "available_rubric_line_agreement_by_judge": "analysis/results/plots/available_rubric_line_agreement_by_judge.png",
+      "available_normalized_points_mae_by_judge": "analysis/results/plots/available_normalized_points_mae_by_judge.png"
+    }
+  }
+}
